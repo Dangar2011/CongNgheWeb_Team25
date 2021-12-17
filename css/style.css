@@ -10,3 +10,13 @@
     padding: 0;
     
 }
+#main{
+    background-image: url(https://th.bing.com/th/id/R.6607c780d62569b57b05b8fc350ff6ab?rik=5jQ4Edt%2beNIlJA&pid=ImgRaw&r=0);
+    background-color: green;
+}
+.btnMenu{
+    height: 20px;
+    border-radius: 40px;
+    background-color: blue;
+    color: white;
+}
