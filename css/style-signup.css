@@ -1,0 +1,63 @@
+/* Modal */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+.modal_overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+.modal_body{
+    height: 500px;
+    width: 460px;
+    background-color: white;
+    margin: auto;
+    z-index: 2;
+    border-radius: 10px;
+    
+/* Login and Signup */
+}
+.link_signup{
+    display: flex;
+    text-align: center;
+}
+.logo{
+    text-align: center;
+}
+.form-control{
+    width: 350px;
+}
+.btn{
+    color: white;
+    background-color: rgb(202, 73, 73);
+    width: 350px;
+    border-radius: 10px;
+}
+.facebook{  
+    border: 1px groove #e0dcdd;
+    background-color: white;
+    width: 350px;
+    height: 60px;
+    border-radius: 5px;
+}
+.google{  
+    border: 1px groove #e0dcdd;
+    background-color: white;
+    width: 350px;
+    height: 60px;
+    border-radius: 5px;
+}
+.apple{  
+    border: 1px groove #e0dcdd;
+    background-color: white;
+    width: 350px;
+    height: 60px;
+    border-radius: 5px;
+}
