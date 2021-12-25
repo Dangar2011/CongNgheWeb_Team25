@@ -53,11 +53,11 @@
                                         <strong>English</strong></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><strong>Sign In</strong></a>
+                                    <a class="nav-link" href="login.php"><strong>Sign In</strong></a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><strong>Sign Up</strong> </a>
+                                    <a class="nav-link" href="signup.php"><strong>Sign Up</strong> </a>
                                 </li>
                             </ul>
 
@@ -361,12 +361,12 @@
 
         <!-- 9 -->
         <center>
-            <div>
+            <div  style="margin-top:150px;">
                 <h2><strong>Stories from Meetup</strong></h2>
                 <p>People on Meetup have fostered community, learned new skills, started businesses, and made life-long
                     friends. Learn how.</p>
             </div>
-            <div class="container">
+            <div class="container" style="margin-bottom:150px;"> 
                 <div class="row">
                     <div class="col-md-12 mt-3">
                         <div class="row">
@@ -425,8 +425,10 @@
 
 
     </main>
-
-
+    
+    <?php 
+        include "template/footer.php";
+    ?>
 
 
 
