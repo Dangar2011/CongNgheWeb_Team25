@@ -1,0 +1,23 @@
+/*Main*/
+.def{
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 150px;
+    background-color: rgb(245, 243, 243);
+}
+/*footer*/
+.footer{
+    background-color: rgb(39, 36, 36);
+    color: white;
+}
+.get_started{
+    border: 1px groove #e0dcdd;
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+}
+.get{
+    display: flex;
+}
