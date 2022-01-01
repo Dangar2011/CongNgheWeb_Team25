@@ -451,8 +451,8 @@
         </div>
         
         <!-- stories -->
-        <div class="stories">
-            <div class="container mt-5">
+        <div class="stories" >
+            <div class="container mt-5" style="background-color: white;">
                <div class="stories mt-5">
                     <h2 class="display-9 mb-3 text-center fw-bold">Stories from Meetup</h2>
                     <p class="text-center mt-3 ">People on Meetup have fostered community, learned new skills, started businesses, and made life-long friends. Learn how.</p>
@@ -487,13 +487,12 @@
             </div>
         </div>
         
-        <?php
-            include("template/footer.php");
-        ?>
-        
+       
     </main>
 
-
+    <?php
+            include("template/footer.php");
+        ?>
 
 
 
