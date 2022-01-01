@@ -1,0 +1,90 @@
+.logochange{
+    width: 95px;
+    height: 35px;
+}
+.imgchange{
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    
+}
+.imgbackgroud-1{
+  position: absolute;
+  top: 690px;
+  left: 30px;
+}
+.imgbackgroud-2{
+  position: absolute;
+  top: 230px;
+  left: 280px;
+}
+.imgbackgroud-3{
+  position: absolute;
+  left: 920px;
+}
+/* body {
+    background-image: url(https://secure.meetupstatic.com/next/images/blobs/red-blob.svg);
+
+} */
+.html,body{
+  margin: 0;
+  padding: 0;
+  background-color: white; 
+  height: 100vh;
+}
+ 
+.btnMenu {
+    height: 50px;
+    border-radius: 30px;
+    background-color: rgb(23, 97, 156);
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+
+/* carousel */
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+      display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+  
+  .carousel-inner .carousel-item-start.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+transform: translateX(0);
+}
+
+.items-center {
+  align-items: center;
+}
+
+
+
+
+/* carousel 2 */
+
+

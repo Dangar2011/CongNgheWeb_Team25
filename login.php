@@ -68,13 +68,7 @@
                                 Log in with Google
                             </a>
                         </button>
-                        <button class="apple mt-3 ms-5">
-                            <a href="https://appleid.apple.com/auth/authorize?redirect_uri=https%3A%2F%2Fwww.meetup.com%2Fties2%2F&state=returnUri%3Dhttps%253A%252F%252Fwww.meetup.com%252Fhome&client_id=com.meetup.web&response_type=code%20id_token&scope=name%20email&response_mode=form_post"
-                                class="text-decoration-none">
-                                <img src="https://img.icons8.com/ios-glyphs/30/000000/mac-os.png" />
-                                Log in with Apple
-                            </a>
-                        </button>
+                        <center><a href="#"class="text-decoration-none link-primary"style="color: rgb(197, 196 ,196);margin-top:30px;">Issues with log in?</a></center>
                     </div>
                 </div>
             </div>
