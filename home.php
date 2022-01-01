@@ -14,6 +14,7 @@
 
     <link rel="shortcut icon" href="image/Meetup_Logo.png">
     <link rel="stylesheet" href="css/style-home.css">
+    <link rel="stylesheet" href="js/js2.js">
 
 </head>
 <body>
@@ -210,18 +211,281 @@
                             <a href="" class="d-inline" style="color: rgb(197, 196 ,196);">Attend an event starting soon</a>
                         </div>
               
-                    </div>  
+                </div>  
                 
                 <!-- carousel -->
-                    
+                <div class="container text-center my-3" >           
+                    <div class="row mx-auto my-auto justify-content-center">
+                        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class="col-md-3">
+                                        <div class="card" style="border:white;">
+                                            <div class="card-img-2">
+                                                <a href="">
+                                                    <img src="image/event-1.jpg"
+                                                    class="img-fluid">
+                                                </a>
+                                                
+                                            </div>
+                                            <div class="px-2">
+                                                <a class="text-decoration-none"href=""> <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">MON, JAN 3 @ 7:00 AM ICT</h6>
+                                                    <h6 class="fw-bold link-dark" ><strong>New York & New Jersey Virtual  Dating</strong>   
+                                                    </h6>   
+                                                    <p class="text-muted mt-3 mb-5">New York
+                                                        Matchmaking Dating
+                                                    </p>
+                                                </a>
+                                                
+                                                    <div class="avatar mt-4">
+                                                        <div class="row ">
+                                                            <div class="col">
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(197, 196 ,196);margin-left:150px" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-up" viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
+                                                                <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                                                                </svg>
+                                                            
+                                                                </a>                                                                    
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""> <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(197, 196 ,196);" width="24" height="24" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                                                </svg></a>
+                                                            
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card" style="border:white;">
+                                            <div class="card-img-2">
+                                                <a href=""><img src="image/event-2.jpg"
+                                                    class="img-fluid"></a>
+                                                
+                                            </div>
+                                            <div class="px-2">
+                                                <a class="text-decoration-none"href=""> <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">SAT, JAN 1 @ 7:00 AM ICT</h6>
+                                                    <h6 class="fw-bold link-dark" ><strong>OASIS CHRISTIAN  SINGLES NEW YEARS EVE ZOOM CELEBRATION</strong>   
+                                                    </h6>   
+                                                    <p class="text-muted mt-3 mb-5">OASIS
+                                                    Tri-State Christian Singles Events
+                                                    </p>
+                                                </a>
+                                                
+                                                    <div class="avatar mt-4">
+                                                        <div class="row ">
+                                                            <div class="col">
+                                                                <!-- images -->
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(197, 196 ,196);margin-left:150px" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-up" viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
+                                                                <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                                                                </svg>
+                                                            
+                                                                </a>                                                                    
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""> <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(197, 196 ,196);margin-right:50px;" width="24" height="24" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                                                </svg></a>
+                                                            
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card" style="border:white;">
+                                            <div class="card-img-2">
+                                                <img src="image/event-3.jpg"
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="px-2">
+                                                <a class="text-decoration-none"href=""> <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">SAT, JAN 1 @ 7:00 AM ICT</h6>
+                                                    <h6 class="fw-bold link-dark" ><strong>First Ever NYC Young Professionals Book Club Meeting</strong>   
+                                                    </h6>   
+                                                    <p class="text-muted mt-3 mb-5">NYC Young Professionals Book Club
+                                                    </p>
+                                                </a>
+                                                
+                                                    <div class="avatar mt-4">
+                                                        <div class="row ">
+                                                            <div class="col">
+                                                                <!-- images -->
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(197, 196 ,196);margin-left:150px" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-up" viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
+                                                                <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                                                                </svg>
+                                                            
+                                                                </a>                                                                    
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""> <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(197, 196 ,196);" width="24" height="24" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                                                </svg></a>
+                                                            
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card" style="border:white;">
+                                            <div class="card-img-2">
+                                                <img src="image/event-4.jpg"
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="px-2">
+                                                <a class="text-decoration-none"href=""> <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">SAT, JAN 1 @ 7:00 AM ICT</h6>
+                                                    <h6 class="fw-bold link-dark" ><strong>Van Gogh Museum - Amsterdam: Livestream Art Tour</strong>   
+                                                    </h6>   
+                                                    <p class="text-muted mt-3 mb-5">New York
+                                                        History and Culture
+                                                    </p>
+                                                </a>
+                                                
+                                                    <div class="avatar mt-4">
+                                                        <div class="row ">
+                                                            <div class="col">
+                                                                <!-- images -->
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(197, 196 ,196);margin-left:150px" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-up" viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
+                                                                <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                                                                </svg>
+                                                            
+                                                                </a>                                                                    
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""> <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(197, 196 ,196);" width="24" height="24" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                                                </svg></a>
+                                                            
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card" style="border:white;">
+                                            <div class="card-img-2">
+                                                <img src="image/event-5.jpg"
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="px-2">
+                                                <a class="text-decoration-none"href=""> <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">SAT, JAN 1 @ 7:00 AM ICT</h6>
+                                                    <h6 class="fw-bold link-dark" ><strong>Online
+                                                        Spanish-English Language Exchange - New Year's Resolution!</strong>   
+                                                    </h6>   
+                                                    <p class="text-muted mt-3 mb-5">Spanglish
+                                                        Languages and Culture
+                                                    </p>
+                                                </a>
+                                                
+                                                    <div class="avatar mt-4">
+                                                        <div class="row ">
+                                                            <div class="col">
+                                                                <!-- images -->
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(197, 196 ,196);margin-left:150px" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-up" viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
+                                                                <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                                                                </svg>
+                                                            
+                                                                </a>                                                                    
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""> <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(197, 196 ,196);" width="24" height="24" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                                                </svg></a>
+                                                            
+                                                            </div>  
+                                                        </div>
+
+                                                    </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev bg-transparent w-aut"  href="#recipeCarousel" role="button"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </a>
+                            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
             
         </div>
         
+        <!-- stories -->
+        <div class="stories">
+            <div class="container mt-5">
+               <div class="stories mt-5">
+                    <h2 class="display-9 mb-3 text-center fw-bold">Stories from Meetup</h2>
+                    <p class="text-center mt-3 ">People on Meetup have fostered community, learned new skills, started businesses, and made life-long friends. Learn how.</p>
+                <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card border-0" >
+                        <a href="#"> <img src="image/story-1.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body px-0 ">
+                            <h5 class="card-title"><a href="#" class="link-dark text-decoration-none fw-bold">Three Ways To Make Coworker Friendships While Working From Home</a></h5>
+                                <p class="card-text text-muted mt-3">Work friendships don't need to fade just because you're working remotely. Here are three fun ways you can get to know your colleagues.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 ">
+                    <div class="card border-0" >
+                        <a href="#"><img src="image/story-2.webp" class="card-img-top" alt="..."></a> 
+                        <div class="card-body px-0">
+                            <h5 class="card-title"><a href="#" class="link-dark text-decoration-none fw-bold">Get Creative: Artistic Hobbies Do More Than Pass the Time</a></h5>
+                            <p class="card-text text-muted mt-3">Reduce stress, improve your mood, and connect with others by pursuing your new artistic hobby through Meetup.</p>
+                        </div>
+                    </div>
+                </div>
 
-
+                <div class="col-md-4 mb-3 ">
+                    <div class="card border-0" >
+                        <a href="#"><img src="image/story-3.webp" class="card-img-top" alt="..."></a>
+                        <div class="card-body px-0">
+                        <h5 class="card-title"><a href="#" class="link-dark text-decoration-none fw-bold">Three Ways to Make Coworker Friendships While Working From Home</a></h5>
+                        <p class="card-text text-muted mt-3">Work friendships don’t need to fade just because you’re working remotely. Here are three fun ways you can get to know your colleagues.</p>
+                    </div>
+                </div> 
+            </div>
+        </div>
         
         <?php
             include("template/footer.php");
