@@ -17,12 +17,14 @@
     height: 60px;
     border-radius: 5px;
 }
+/*fb, Tw, GG*/
 .button_signin{
     display: flex;
     width: 400px;
     justify-content: center;
     align-items: center;
 }
+/*footer*/
 .footer{
     background-color: rgb(39, 36, 36);
     color: white;
