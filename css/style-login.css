@@ -27,33 +27,20 @@
     display: flex;
     justify-content: center;
 }
-.facebook{  
-    border: 1px groove #e0dcdd;
-    background-color: white;
-    width: 350px;
-    height: 60px;
-    border-radius: 5px;
-}
-.google{  
-    border: 1px groove #e0dcdd;
-    background-color: white;
-    width: 350px;
-    height: 60px;
-    border-radius: 5px;
-}
-.apple{  
-    border: 1px groove #e0dcdd;
-    background-color: white;
-    width: 350px;
-    height: 60px;
-    border-radius: 5px;
-}
+/*fb, Tw, GG*/
 .button_login{
     display: flex;
     width: 400px;
     justify-content: center;
     align-items: center;
+    border: 1px groove #e0dcdd;
+    background-color: white;
+    width: 350px;
+    height: 60px;
+    border-radius: 5px;
+    
 }
+/*footer*/
 .footer{
     background-color: rgb(39, 36, 36);
     color: white;
