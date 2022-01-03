@@ -1,6 +1,7 @@
 .main{
     display: flex;
     justify-content: center;
+    height: 700px;
 }
 .main_form{
     display: flex;
@@ -33,12 +34,14 @@
     width: 400px;
     justify-content: center;
     align-items: center;
+    text-align: left;
+}
+.btn_a{
     border: 1px groove #e0dcdd;
     background-color: white;
     width: 350px;
     height: 60px;
     border-radius: 5px;
-    
 }
 /*footer*/
 .footer{

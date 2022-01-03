@@ -57,25 +57,34 @@
       <div class="hr mt-3 ms-5">
         <hr width="40%" align="center" />
       </div>
+<!-- Fb, Gg, Apple -->
       <div class="button_login mt-3 row">
-        <button class="facebook">
-          <a href="#" class="text-decoration-none">
-            <img src="https://img.icons8.com/ios-glyphs/30/4a90e2/facebook-f.png" />
-          </a>
-          Log in with Facebook
-        </button>
-        <button class="google mt-3">
-          <a href="#" class="text-decoration-none">
-            <img src="https://img.icons8.com/offices/30/000000/google-logo.png" />
-          </a>
-          Log in with Google
-        </button>
-        <button class="apple mt-3">
-          <a href="#" class="text-decoration-none">
-            <img src="https://img.icons8.com/ios-glyphs/30/000000/mac-os.png" />
-          </a>
-          Log in with Apple
-        </button>
+        <div class="fb">
+          <button class="btn_a">
+            <a href="#" class="text-decoration-none">
+              <img src="https://img.icons8.com/ios-glyphs/30/4a90e2/facebook-f.png" />
+            </a>
+            Log in with Facebook
+          </button>
+        </div>
+
+        <div class="gg">
+          <button class="btn_a mt-3">
+            <a href="#" class="text-decoration-none">
+              <img src="https://img.icons8.com/offices/30/000000/google-logo.png" />
+            </a>
+            Log in with Google
+          </button>
+        </div>
+
+        <div class="apple">
+          <button class="btn_a mt-3">
+            <a href="#" class="text-decoration-none">
+              <img src="https://img.icons8.com/ios-glyphs/30/000000/mac-os.png" />
+            </a>
+            Log in with Apple
+          </button>
+        </div>
       </div>
     </div>
   </main>

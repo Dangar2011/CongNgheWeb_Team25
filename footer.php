@@ -13,7 +13,7 @@
       <div class="col-md">
         Your Account
         <ul class="menu list-unstyled">
-          <li><a href="signup.php" style="text-decoration:none; color: rgb(197, 196 ,196) ">Sign up</a></li>
+          <li><a href="signup.php" style="text-decoration:none; color: rgb(197, 196 ,196)">Sign up</a></li>
           <li><a href="login.php" style="text-decoration:none; color: rgb(197, 196 ,196) ">Log in</a></li>
           <li><a href="#" style="text-decoration:none; color: rgb(197, 196 ,196) ">Help</a></li>
         </ul>
