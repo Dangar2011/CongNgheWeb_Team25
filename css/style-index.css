@@ -81,8 +81,13 @@ transform: translateX(0);
 .items-center {
   align-items: center;
 }
-
-
+.card-img{
+  width:  90%;
+  height: 90%;
+}
+.img-fluid{
+    border-radius: 8px;
+}
 
 
 /* carousel 2 */
