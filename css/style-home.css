@@ -1,0 +1,131 @@
+.html,body{
+    margin: 0;
+    padding: 0;
+    background-color: #e4e4e4; 
+
+    height: 100vh;/*body chiếm độ cao toàn bộ cửa sổ trình duyệt*/
+}
+.logochange{
+    width: 95px;
+    height: 35px;
+}
+.header{
+    background-color: #e4e4e4; 
+    padding: 10px 0;
+    }
+
+.card-item{
+    display: flex;
+    height: 220px;
+    width: 550px;
+    padding:25px 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    
+}
+.card-img{
+    width: 80px;
+    height: 80px;
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+   
+}
+.btnMenu {
+    height: 50px;
+    border-radius: 30px;
+    background-color: rgb(23, 97, 156);
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+.card-content-title{
+    font-size: 20px;
+    margin-bottom: 15px;
+    }
+.card-content-text{
+    margin-bottom:30px;
+}
+
+.btn-card{
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid #1795a8;
+    padding: 12px;
+    color: #1795a8;
+    border-radius: 8px;
+    font-weight: 600;
+    max-width: 180px;
+    text-align: center;
+ }
+ .btn-card:hover{
+    background-color: #1795a8;
+    color: white;
+}
+.card__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1300px;
+    margin: auto;
+    border-radius: 8px;
+}
+/* .events{
+    background-color:white;
+    margin-top:15px;
+} */
+/* .find-events{
+    background-color:white;
+    padding-bottom: 20px;
+} */
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+      display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+  
+  .carousel-inner .carousel-item-start.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+transform: translateX(0);
+}
+
+.items-center {
+  align-items: center;
+}
+.card-img-2{
+    width:  90%;
+    height: 90%; 
+}
+.img-fluid{
+    border-radius: 8px;
+}
+.stories{
+    background-color: white;
+}
