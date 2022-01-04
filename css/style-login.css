@@ -1,7 +1,7 @@
 .main{
     display: flex;
     justify-content: center;
-    height: 700px;
+    height: 1000px;
 }
 .main_form{
     display: flex;
@@ -31,10 +31,9 @@
 /*fb, Tw, GG*/
 .button_login{
     display: flex;
-    width: 400px;
     justify-content: center;
     align-items: center;
-    text-align: left;
+    text-align: center;
 }
 .btn_a{
     border: 1px groove #e0dcdd;
@@ -57,4 +56,13 @@
 }
 .get{
     display: flex;
+}
+.form{
+    display: flex;
+    height: 800px;
+    width: 484px;
+    background-color: white;
+    border: 1px groove gray;
+    margin: auto;
+    border-radius: 10px; 
 }

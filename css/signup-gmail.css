@@ -1,0 +1,45 @@
+/*Main*/
+.form{
+    display: flex;
+    height: 800px;
+    width: 484px;
+    background-color: white;
+    border: 1px groove gray;
+    margin: auto;
+    border-radius: 10px;   
+}
+.text{
+    font-weight: 600;
+    font-size: 30px;
+}
+/*Form Sign up*/
+.form-control{
+    border-radius: 5px;
+    max-width: 380px;
+}
+.btn_signup{
+    color: white;
+    background-color: rgb(224, 61, 61);
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+}
+.main_footer{
+    display: flex;
+    justify-content: center;
+}
+/*Footer*/
+.footer{
+    background-color: rgb(39, 36, 36);
+    color: white;
+}
+.get_started{
+    border: 1px groove #e0dcdd;
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+}
+.get{
+    display: flex;
+}

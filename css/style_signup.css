@@ -1,0 +1,51 @@
+.form{
+    display: flex;
+    height: 500px;
+    width: 484px;
+    background-color: white;
+    border: 1px groove gray;
+    margin: auto;
+    border-radius: 10px; 
+}
+.main{
+    display: flex;
+    justify-content: center;
+}
+.main_form{
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    display: flex;
+    text-align: center;
+}
+.bnt{  
+    border: 1px groove #e0dcdd;
+    background-color: white;
+    width: 350px;
+    height: 60px;
+    border-radius: 5px;
+}
+/*fb, Tw, GG*/
+.button_signin{
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+
+}
+/*footer*/
+.footer{
+    background-color: rgb(39, 36, 36);
+    color: white;
+}
+.get_started{
+    border: 1px groove #e0dcdd;
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+}
+.get{
+    display: flex;
+}
