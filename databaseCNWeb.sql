@@ -29,8 +29,10 @@ content text
 )
 create table Groups(
 idGroups int primary key identity,
-idUser int
+idUser int,
+idPost int
 )
+--drop table Groups
 --the hien cmt do ai viet
 alter table Comments
 add constraint fk_cmt_user foreign key (idUser) references Users(idUser)
@@ -46,3 +48,9 @@ add constraint fk_cmt_post foreign key (idPost) references Post(idPost)
 --the hien group co user nao
 alter table Groups
 add constraint fk_groups_user foreign key (idUser) references Users(idUser)
+--the hien group co nhieu post
+alter table Groups
+add constraint fk_groups_post foreign key (idPost) references Post(idPost)
+ 
+
+--EXEC sp_helpconstraint Groups
