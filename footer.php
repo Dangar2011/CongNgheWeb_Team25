@@ -1,4 +1,4 @@
-<footer class="footer mt-5">
+<footer class="footer mt-5 ">
   <div class=" mt-4 container ms-3 row">
     <div class="get mt-3">
       <div class="mt-1">
@@ -56,32 +56,13 @@
       </div>
 
     </div>
-    <div class="meetup_2021 mt-4 mb-3 row">
-      <div class="col-md-2">
-        <p>© 2021 Meetup</p>
-      </div>
-
-      <div class="col-md-1">
-        <ul class="menu list-unstyled">
-          <li><a href="#" style="text-decoration:none; color: rgb(197, 196 ,196)">About</a></li>
-      </div>
-
-      <div class="col-md-2">
-        <ul class="menu list-unstyled">
-          <li><a href="#" style="text-decoration:none; color: rgb(197, 196 ,196)">Privacy Policy</a></li>
-      </div>
-
-      <div class="col-md-2">
-        <ul class="menu list-unstyled">
-          <li><a href="#" style="text-decoration:none; color: rgb(197, 196 ,196)">Cookie Policy</a></li>
-      </div>
-
-      <div class="col-md-1">
-        <ul class="menu list-unstyled">
-          <li><a href="#" style="text-decoration:none; color: rgb(197, 196 ,196)">Help</a></li>
-      </div>
-
-    </div>
+    <div class="p-3 mb-4">
+        © 2022 Meetup
+        <a href="#!" class="text-decoration-none link-primary" style="color: rgb(197, 196 ,196);margin-right:20px; margin-left: 20px;">Terms of Service</a>
+        <a href="#!" class="text-decoration-none link-primary"style="color: rgb(197, 196 ,196);;margin-right:20px;">Privacy Policy</a>
+        <a href="#!" class="text-decoration-none link-primary" style="color: rgb(197, 196 ,196);;margin-right:20px;">Cookie Policy</a>
+        <a href="#!" class="text-decoration-none link-primary"style="color: rgb(197, 196 ,196);;margin-right:20px;">Help</a>
+        </div>
 
   </div>
 </footer>

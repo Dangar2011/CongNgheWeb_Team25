@@ -21,8 +21,23 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <!-- Search -->
+          <div class="search_location input-group ms-4">
+            <div class="form-outline">
+              <label class="form-label" for="form1"></label>
+              <input type="search" id="form1" class="form-control" placeholder="Search for keywords"/>
+            </div>
+            <button type="button" class="btn_search" style="height: 38px; width: 38px;">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"><i class="bi bi-globe"></i>
+                  <strong>English</strong></a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="login.php"><b>Log In</b></a>
               </li>
@@ -98,7 +113,7 @@
         </div>
         <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
           969 members . Public
-          <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png"/>
+          <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png" />
         </div>
       </div>
       <hr>
@@ -116,7 +131,7 @@
         </div>
         <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
           369 members . Public
-          <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png"/>
+          <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png" />
         </div>
       </div>
       <hr>
@@ -134,7 +149,7 @@
         </div>
         <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
           893 members . Public
-          <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png"/>
+          <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png" />
         </div>
       </div>
       <hr>
@@ -153,7 +168,7 @@
         </div>
         <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
           478 members . Public
-          <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png"/>
+          <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png" />
         </div>
       </div>
       <hr>
@@ -171,7 +186,7 @@
         </div>
         <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
           569 members . Public
-          <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png"/>
+          <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png" />
         </div>
       </div>
     </div>
