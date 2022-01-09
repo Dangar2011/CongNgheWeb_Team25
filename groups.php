@@ -17,15 +17,30 @@
     <div class="top_narbar">
       <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand ms-4" href="#"><img src="image/meetup-logo-1.png" style="height: 34px; width: 100px;" alt=""></a>
+          <a class="navbar-brand ms-4" href="#"><img src="image/meetup-logo-1.png" style="height: 32px; width: 100px;" alt=""></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
+          <!-- Form Search -->
+          <div class=" ms-4">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for keywords" aria-label="">
+              <input type="text" class="form-control" placeholder="Enter Location" aria-label="">
+              <form action="find/index.php">
+                <button class="btn btn-outline-secondary bg-danger" type="submit">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 20 20" style="color:white">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" style="color: #339966;" aria-current="page" href="#"><b>Start a new group</b></a>
+                <a class="nav-link active" style="color: #339966;" aria-current="page" href=""><b>Start a new group</b></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="index.html"><i class="bi bi-globe"></i>
@@ -130,7 +145,7 @@
       <hr>
       <div class="row g-0 position-relative">
         <div class="col-md-6 mb-md-0 p-md-3">
-          <img src="image/badminton.jpeg" class="group_image" alt="...">
+          <img src="image/badminton_event.webp" class="group_image" alt="...">
         </div>
         <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
           <h5 class="mt-0" style="color: black;">Hanoi Badminton</h5>
@@ -142,43 +157,6 @@
         </div>
         <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
           893 members . Public
-          <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png" />
-        </div>
-      </div>
-      <hr>
-      <div class="row g-0 position-relative">
-        <div class="col-md-6 mb-md-0 p-md-3">
-          <img src="image/language.png" class="group_image" alt="...">
-        </div>
-        <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
-          <h5 class="mt-0" style="color: black;">
-            Hanoi International Language Exchange</h5>
-          <h6>HA NOI, VN</h6>
-          <div class="mt-2">
-            <p>In the group, attendances will chat with other languages that they want to learn in Cafe....</p>
-          </div>
-          <a href="signup.html" class="stretched-link"></a>
-        </div>
-        <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
-          478 members . Public
-          <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png" />
-        </div>
-      </div>
-      <hr>
-      <div class="row g-0 position-relative">
-        <div class="col-md-6 mb-md-0 p-md-3">
-          <img src="image/girl.png" class="group_image" alt="...">
-        </div>
-        <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
-          <h5 class="mt-0" style="color: black;">Hanoi I Girl Gone International</h5>
-          <h6>HA NOI, VN</h6>
-          <div class="mt-2">
-            <p>Quynh Nga is the GGI Ha Noi COMMUNITY MANAGER....</p>
-          </div>
-          <a href="signup.html" class="stretched-link"></a>
-        </div>
-        <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
-          569 members . Public
           <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png" />
         </div>
       </div>
