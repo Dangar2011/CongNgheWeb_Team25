@@ -2,18 +2,21 @@ create database meetup
 create table Users(
 idUser int primary key identity,
 username varchar(50),
+pass varchar(50),
+email varchar(50),
 avatar image,
 gender varchar(10) default 'Male',
-birthday datetime
+birthday date
 )
+drop table Users
 create table Post(
 idPost int Primary key identity,
 idUser int,
 idPCate int,
 images image,
 content text,
-created datetime not null default(getdate()),
-openDay datetime not null,
+created date not null default(getdate()),
+openDay date not null,
 addresspost varchar(50)
 )
 
