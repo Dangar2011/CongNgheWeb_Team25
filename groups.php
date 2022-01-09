@@ -21,16 +21,6 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <!-- Search -->
-          <div class="search_location input-group ms-4">
-            <div class="form-outline">
-              <label class="form-label" for="form1"></label>
-              <input type="search" id="form1" class="form-control" placeholder="Search for keywords"/>
-            </div>
-            <button type="button" class="btn_search" style="height: 38px; width: 38px;">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -58,7 +48,7 @@
   <main class="container mt-5 col-sm-10">
     <div class="group row">
       <div class="list-unstyled col-md-1">
-        <a href="" style="text-decoration:none; color: rgb(156, 148, 148)">
+        <a href="events.php" style="text-decoration:none; color: rgb(156, 148, 148)">
           <h4>Events</h4>
         </a>
       </div>

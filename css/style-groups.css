@@ -62,8 +62,3 @@ footer{
 .get{
     display: flex;
 }
-/* Search*/
-search_location{
-    height: 34px;
-    width: 100px;
-}
