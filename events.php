@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/style-groups.css">
+    <link rel="stylesheet" href="css/style-groups-events.css">
 </head>
 
 <body>
@@ -21,9 +21,25 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+                    <div class=" form_seach">
+                        <form class="form-inline row">
+                            <div class="col-md-2">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search for keywords">
+                            </div>
+                            <div class="col-md-2">
+                                <input class="form-control mr-sm-2" type="location" placeholder="Location" aria-label="Enter location">
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </div>
+                        </form>
+                    </div>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" style="color: #339966;" aria-current="page" href=""><b>Start a new group</b></a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html"><i class="bi bi-globe"></i>
                                     <strong>English</strong></a>
@@ -48,7 +64,7 @@
     <main class="container mt-5 col-sm-10">
         <div class="group row">
             <div class="list-unstyled col-md-1">
-                <a href="events.php" style="color: rgb(42, 167, 42)">
+                <a href="events.php" style="color: #006699">
                     <h4>Events</h4>
                 </a>
             </div>
@@ -61,10 +77,10 @@
 
             <!-- Default -->
             <div class="mt-3" style="color: rgb(156, 148, 148)">
-                <p>Suggested Groups near Ha Noi, VN</p>
+                <p>Suggested Events near Ha Noi, VN</p>
             </div>
             <div class="Default row">
-                <div class="any_day col-sm-2">
+                <div class="any_day col-md-2">
                     <select class="def" aria-label="Default select example">
                         <option selected>Any Day</option>
                         <option value="1">To day</option>
@@ -74,14 +90,14 @@
                         <option value="1">Coustom</option>
                     </select>
                 </div>
-                <div class="any_type col-sm-2">
+                <div class="any_type col-md-2">
                     <select class="def" aria-label="Default select example">
                         <option selected>Any type</option>
                         <option value="1">online</option>
                         <option value="1">In person</option>
                     </select>
                 </div>
-                <div class="any_distance col-sm-2">
+                <div class="any_distance col-md-2">
                     <select class="def" aria-label="Default select example">
                         <option selected>Any Distance</option>
                         <option value="1">2 miles</option>
@@ -91,7 +107,7 @@
                         <option value="1">50 miles</option>
                     </select>
                 </div>
-                <div class="any_category col-sm-2">
+                <div class="any_category col-md-2">
                     <select class="def" aria-label="Default select example">
                         <option selected>Any Category</option>
                         <option value="1">Any Category</option>
@@ -101,7 +117,7 @@
                         <option value="1">Any Category</option>
                     </select>
                 </div>
-                <div class="sort col-sm-2">
+                <div class="sort col-md-2">
                     <select class="def" aria-label="Default select example" style="width: 180px; color:white; background-color:	#006699">
                         <option selected>Sort by: Relavance</option>
                         <option value="1">date</option>
@@ -118,6 +134,7 @@
                     <img src="image/badminton_event.webp" class="group_image" alt="...">
                 </div>
                 <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
+                    <h7 style="color: #999966">SUN, JAN 9 @ 12:00 PM 2022</h7>
                     <h5 class="mt-0" style="color: black;">Funminton 2 - Every Sunday 12:00 - 14:00</h5>
                     <div class="mt-2">
                         <p>Hanoi Badminton . HN,VN </p>
@@ -126,46 +143,43 @@
                 </div>
                 <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
                     24 attendees
-                    <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png" />
                 </div>
             </div>
             <hr>
             <div class="row g-0 position-relative">
                 <div class="col-md-6 mb-md-0 p-md-3 ">
-                    <img src="image/Sahaja Yoga.jpeg" class="group_image" alt="...">
+                    <img src="image/idea_to_ipo_events.webp" class="group_image" alt="...">
                 </div>
                 <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
-                    <h5 class="mt-0" style="color: black;">Ha Noi Sahaja Yoga Meditation</h5>
-                    <h6>HA NOI, VN</h6>
+                    <h7 style="color: #999966">SUN, JAN 9 @ 12:00 PM 2022</h7>
+                    <h5 class="mt-0" style="color: black;">How Non-Techies Can Launch Successful Tech Startups</h5>
                     <div class="mt-2">
-                        <p>Looking for peace, balance, joy, overcome stress, transform and meet other seekers?...</p>
+                        <p>Group name:Ha Noi Startup: Idea to IPO • Ha Noi, VN</p>
                     </div>
                     <a href="signup.html" class="stretched-link"></a>
                 </div>
                 <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
                     8 attendees
-                    <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png" />
                 </div>
             </div>
             <hr>
             <div class="row g-0 position-relative">
                 <div class="col-md-6 mb-md-0 p-md-3">
-                    <img src="image/badminton.jpeg" class="group_image" alt="...">
+                    <img src="image/yoga_events.webp" class="group_image" alt="...">
                 </div>
                 <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
-                    <h5 class="mt-0" style="color: black;">Hanoi Badminton</h5>
-                    <h6>HA NOI, VN</h6>
+                    <h7 style="color: #999966">SUN, JAN 9 @ 9:45 AM 2022</h7>
+                    <h5 class="mt-0" style="color: black;">
+                        Ha Noi Sunday Free Online Guided Meditation- Beginners and Intermediate</h5>
                     <div class="mt-2">
-                        <p>This group is for Badminton players of all abilities. We will meet regularly to play mainly doubles games....</p>
+                        <p>Group name:Ha Noi Sahaja Yoga Meditation • Ha Noi, VN</p>
                     </div>
                     <a href="signup.html" class="stretched-link"></a>
                 </div>
                 <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
                     24 attendees
-                    <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png" />
                 </div>
             </div>
-            <hr>
         </div>
     </main>
     <!-- Footer -->

@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="css/style-groups.css">
+  <link rel="stylesheet" href="css/style-groups-events.css">
 </head>
 
 <body>
@@ -24,6 +24,9 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" style="color: #339966;" aria-current="page" href="#"><b>Start a new group</b></a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="index.html"><i class="bi bi-globe"></i>
                   <strong>English</strong></a>
@@ -53,7 +56,7 @@
         </a>
       </div>
       <div class="col-md-6">
-        <a href="groups.php" style="color: rgb(42, 167, 42)">
+        <a href="groups.php" style="color: #006699">
           <h4>Groups</h4>
 
         </a>

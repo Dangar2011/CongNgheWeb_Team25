@@ -1,3 +1,10 @@
+.html,body{
+    margin: 0;
+    padding: 0;
+    background-color: #e4e4e4; 
+
+    height: 100vh;/*body chiếm độ cao toàn bộ cửa sổ trình duyệt*/
+}
 /*Main*/
 .form{
     display: flex;
@@ -34,9 +41,9 @@
     color: white;
 }
 .get_started{
-    border: 1px groove #e0dcdd;
+    border: 2px groove #e0dcdd;
     background-color: white;
-    width: 100px;
+    width: 120px;
     height: 40px;
     border-radius: 5px;
 }
