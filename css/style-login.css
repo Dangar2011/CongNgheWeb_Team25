@@ -1,9 +1,8 @@
-
 .main{
     display: flex;
     justify-content: center;
-    height: 1000px;
 }
+
 .main_form{
     display: flex;
     justify-content: center;
@@ -12,6 +11,7 @@
     display: flex;
     text-align: center;
 }
+/*Form Login*/
 .form_login{
     display: flex;
     justify-content: center;
