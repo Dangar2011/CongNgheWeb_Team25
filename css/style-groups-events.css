@@ -1,4 +1,3 @@
-
 /*Header*/
 header {
     position: fixed;
@@ -61,8 +60,4 @@ footer{
 }
 .get{
     display: flex;
-}
-.form_seach{
-    display: flex;
-    align-items: center;
 }
