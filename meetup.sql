@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 09, 2022 lúc 04:00 PM
+-- Thời gian đã tạo: Th1 10, 2022 lúc 07:07 AM
 -- Phiên bản máy phục vụ: 10.4.20-MariaDB
 -- Phiên bản PHP: 8.0.9
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `meetup`
+-- Cơ sở dữ liệu: `btl`
 --
 
 -- --------------------------------------------------------
@@ -31,9 +31,8 @@ CREATE TABLE `comments` (
   `idCmt` int(11) NOT NULL,
   `idUser` int(11) DEFAULT NULL,
   `idPost` int(11) DEFAULT NULL,
-  `dateCmt` datetime DEFAULT NULL,
-  `content` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `content` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -45,24 +44,7 @@ CREATE TABLE `groups` (
   `idGroups` int(11) NOT NULL,
   `idUser` int(11) DEFAULT NULL,
   `idPost` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `post`
---
-
-CREATE TABLE `post` (
-  `idPost` int(11) NOT NULL,
-  `idUser` int(11) DEFAULT NULL,
-  `idPCate` int(11) DEFAULT NULL,
-  `images` varchar(255) DEFAULT NULL,
-  `content` text DEFAULT NULL,
-  `created` date DEFAULT NULL,
-  `openDay` date NOT NULL,
-  `addresspost` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -72,8 +54,26 @@ CREATE TABLE `post` (
 
 CREATE TABLE `postcategory` (
   `idPCate` int(11) NOT NULL,
-  `namePC` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `namePC` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `posts`
+--
+
+CREATE TABLE `posts` (
+  `idPost` int(11) NOT NULL,
+  `idUser` int(11) DEFAULT NULL,
+  `idPCate` int(11) DEFAULT NULL,
+  `title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `content` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `images` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT 'None',
+  `created` datetime NOT NULL DEFAULT curdate(),
+  `openDay` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -83,13 +83,13 @@ CREATE TABLE `postcategory` (
 
 CREATE TABLE `users` (
   `idUser` int(11) NOT NULL,
-  `username` varchar(50) DEFAULT NULL,
-  `pass` varchar(50) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `avatar` varchar(255) DEFAULT NULL,
-  `gender` varchar(10) DEFAULT 'Male',
+  `username` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pass` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `avatar` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gender` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT 'Male',
   `birthday` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -112,18 +112,18 @@ ALTER TABLE `groups`
   ADD KEY `fk_groups_post` (`idPost`);
 
 --
--- Chỉ mục cho bảng `post`
---
-ALTER TABLE `post`
-  ADD PRIMARY KEY (`idPost`),
-  ADD KEY `fk_post_user` (`idUser`),
-  ADD KEY `fk_pc_post` (`idPCate`);
-
---
 -- Chỉ mục cho bảng `postcategory`
 --
 ALTER TABLE `postcategory`
   ADD PRIMARY KEY (`idPCate`);
+
+--
+-- Chỉ mục cho bảng `posts`
+--
+ALTER TABLE `posts`
+  ADD PRIMARY KEY (`idPost`),
+  ADD KEY `fk_post_user` (`idUser`),
+  ADD KEY `fk_pc_post` (`idPCate`);
 
 --
 -- Chỉ mục cho bảng `users`
@@ -148,16 +148,16 @@ ALTER TABLE `groups`
   MODIFY `idGroups` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `post`
---
-ALTER TABLE `post`
-  MODIFY `idPost` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT cho bảng `postcategory`
 --
 ALTER TABLE `postcategory`
   MODIFY `idPCate` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `idPost` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
@@ -173,20 +173,20 @@ ALTER TABLE `users`
 -- Các ràng buộc cho bảng `comments`
 --
 ALTER TABLE `comments`
-  ADD CONSTRAINT `fk_cmt_post` FOREIGN KEY (`idPost`) REFERENCES `post` (`idPost`),
+  ADD CONSTRAINT `fk_cmt_post` FOREIGN KEY (`idPost`) REFERENCES `posts` (`idPost`),
   ADD CONSTRAINT `fk_cmt_user` FOREIGN KEY (`idUser`) REFERENCES `users` (`idUser`);
 
 --
 -- Các ràng buộc cho bảng `groups`
 --
 ALTER TABLE `groups`
-  ADD CONSTRAINT `fk_groups_post` FOREIGN KEY (`idPost`) REFERENCES `post` (`idPost`),
+  ADD CONSTRAINT `fk_groups_post` FOREIGN KEY (`idPost`) REFERENCES `posts` (`idPost`),
   ADD CONSTRAINT `fk_groups_user` FOREIGN KEY (`idUser`) REFERENCES `users` (`idUser`);
 
 --
--- Các ràng buộc cho bảng `post`
+-- Các ràng buộc cho bảng `posts`
 --
-ALTER TABLE `post`
+ALTER TABLE `posts`
   ADD CONSTRAINT `fk_pc_post` FOREIGN KEY (`idPCate`) REFERENCES `postcategory` (`idPCate`),
   ADD CONSTRAINT `fk_post_user` FOREIGN KEY (`idUser`) REFERENCES `users` (`idUser`);
 COMMIT;
