@@ -33,7 +33,7 @@
                 </div>
                 <!-- Form_Sign up_gmail -->
                 <div class="form_gmail mt-4">
-                    <form>
+                    <form action="activeAccout.php">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label"><strong>Your name</strong></label>
                             <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -42,7 +42,7 @@
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label"><strong>Email
                                     address</strong></label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="example@email.com">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="example@gmail.com">
                             <div id="emailaddress" class="form-text">We’ll use your email address to send you updates.
                             </div>
                         </div>
