@@ -155,6 +155,7 @@
                         </div>
                         <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
                             24 attendees
+                            <hr>
                     <?php
                 }
             }
