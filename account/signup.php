@@ -9,13 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/style_signup.css">
+    <link rel="stylesheet" href="../css/style_signup.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar">
-            <a class="navbar-brand ms-4" href="#"><img src="image/meetup-logo-1.png" style="height: 34px; width: 100px;" alt=""></a>
+            <a class="navbar-brand ms-4" href="#"><img src="../image/meetup-logo-1.png" style="height: 34px; width: 100px;" alt=""></a>
         </nav>
     </header>
     <!-- Main -->
@@ -24,14 +24,14 @@
             <div class="main_form container mt-4 row">
                 <div class="logo row">
                     <div class="image_logo mt-4 me-5">
-                        <img src="image/Meetup_Logo.png" style="height: 48px;" alt="">
+                        <img src="../image/Meetup_Logo.png" style="height: 48px;" alt="">
                     </div>
                     <div class="mt-1">
                         <h4><strong>Sign up</strong></h4>
                     </div>
                     <div class="main_form container">
                         <p>Already a member?</p>
-                        <a href="login.php" class="text-decoration-none ms-1">Log in</a>
+                        <a href="../account/login.php" class="text-decoration-none ms-1">Log in</a>
                     </div>
                 </div>
                 <!-- Sign Up With ... -->
@@ -76,7 +76,7 @@
     </main>
     <!-- Footer -->
     <?php
-    include("footer_B/footer_1.php");
+    include("../template/footer_1.php");
     ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

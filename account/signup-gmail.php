@@ -23,7 +23,7 @@
         <!-- Main -->
         <div class="form mt-5">
             <div class="icon_left">
-                <a href="signup.php">
+                <a href="../account/signup.php">
                     <i class="bi bi-chevron-left" style="font-size: 30px; color: black;"></i>
                 </a>
             </div>
@@ -33,7 +33,7 @@
                 </div>
                 <!-- Form_Sign up_gmail -->
                 <div class="form_gmail mt-4">
-                    <form action="active_accout.php">
+                    <form action="../account/active_account.php">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label"><strong>Your name</strong></label>
                             <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -79,7 +79,7 @@
 
                     <div class="main_footer mt-3 me-5">
                         Already a member?
-                        <a href="login.php" class="text-decoration-none ms-1">Log in</a>
+                        <a href="../account/login.php" class="text-decoration-none ms-1">Log in</a>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
     <!-- Footer -->
     <footer>
         <?php
-        include("footer_B/footer_1.php");
+        include("../template/footer_1.php");
         ?>
     </footer>
 
