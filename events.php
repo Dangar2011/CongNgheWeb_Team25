@@ -131,24 +131,39 @@
         </div>
         <!-- List Event -->
         <div class="list_groups">
+            <?php 
+                 require ('C:\xampp\htdocs\CongNgheWeb_Team25\post\post_connect.php');
+                 $sql = "SELECT title,images,content,openday,address FROM posts";
+                 $result = mysqli_query($conn, $sql);
+                if(mysqli_num_rows($result) > 0){
+                while ($row=mysqli_fetch_array($result)){
+                    $imageURL = 'photo/'.$row["images"];
+                    ?>
             <div class="row g-0 position-relative">
                 <div class="col-md-6 mb-md-0 p-md-3">
-                    <img src="image/badminton_event.webp" class="group_image" alt="...">
+                    <img src="<?php echo $imageURL;  ?>" class="group_image" alt="...">
                 </div>
                 <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
-                    <h7 style="color: #999966">SUN, JAN 9 @ 12:00 PM 2022</h7>
-                    <h5 class="mt-0" style="color: black;">Funminton 2 - Every Sunday 12:00 - 14:00</h5>
+                
+                    <h7 style="color: #999966"><?php echo $row['openday'];   ?></h7>
+                    <h5 class="mt-0" style="color: black;"><?php echo $row['title']; ?></h5>
                     <div class="mt-2">
-                        <p>Hanoi Badminton . HN,VN </p>
+                        <p><?php echo $row['address']; ?> </p>
                     </div>
                     <a href="signup.html" class="stretched-link"></a>
                 </div>
                 <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
                     24 attendees
+             <?php
+                     }
+                  }
+                        // Bước 04: Đóng kết nối Database Server
+                mysqli_close($conn);
+              ?>
                 </div>
             </div>
             <hr>
-            <div class="row g-0 position-relative">
+            <!-- <div class="row g-0 position-relative">
                 <div class="col-md-6 mb-md-0 p-md-3 ">
                     <img src="image/idea_to_ipo_events.webp" class="group_image" alt="...">
                 </div>
@@ -181,7 +196,7 @@
                 <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
                     24 attendees
                 </div>
-            </div>
+            </div> -->
         </div>
     </main>
     <!-- Footer -->

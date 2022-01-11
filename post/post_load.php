@@ -11,6 +11,7 @@ $targetFilePath = $targetDir . $fileName;//Đây là tên đầy đủ+đường
 $title = $_POST['txtTitle'];
 $content = $_POST['txtContent'];
 $openday=$_POST['txtOpenday'];
+$address=$_POST['txtAddress'];
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);//bắt định dạng tệp tin
 
 //b2 kiểmtra xem người dùng đã nhấn submit chưa và file đã được chọn chưa
@@ -28,7 +29,7 @@ if(isset($_POST["btn_Upload"]) && !empty($_FILES["txtImage"]["name"])){
         if(move_uploaded_file($_FILES["txtImage"]["tmp_name"], $targetFilePath)){//lấy từ nơi tạm vào nơi chính
             // lưu đường dẫn vào CSDL
             //$insert = $db->query("INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
-            $sql="INSERT into posts ( title ,content,image,openday,created ) VALUES ('".$title."', '".$content."', '".$fileName."','".$openday."', NOW())";
+            $sql="INSERT into posts ( title ,content,images,address,openday,created ) VALUES ('".$title."', '".$content."', '".$fileName."','".$address."','".$openday."', NOW())";
             $insert=mysqli_query($conn,$sql);
            
            if($insert){//kiểm tra việc query thành công
@@ -39,6 +40,7 @@ if(isset($_POST["btn_Upload"]) && !empty($_FILES["txtImage"]["name"])){
                 // echo "<pre>";
             }else{
                 $statusMsg = "File upload failed, please try again.";
+              
             } 
         }else{
             $statusMsg = "Sorry, there was an error uploading your file.";

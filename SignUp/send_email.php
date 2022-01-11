@@ -55,4 +55,5 @@ function sendEmailLogin($email)
     }
     return false;
 }
+
 ?>
