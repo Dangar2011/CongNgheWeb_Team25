@@ -47,10 +47,10 @@
                   <strong>English</strong></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="login.php"><b>Log In</b></a>
+                <a class="nav-link active" aria-current="page" href="accout/login.php"><b>Log In</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="SignUp/signup.php"><b>Sign Up</b></a>
+                <a class="nav-link active" aria-current="page" href="accout/signup.php"><b>Sign Up</b></a>
               </li>
             </ul>
           </div>
@@ -165,7 +165,7 @@
   <!-- Footer -->
   <footer>
     <?php
-    include("footer_B/footer_1.php");
+    include("template/footer_1.php");
     ?>
   </footer>
 

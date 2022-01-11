@@ -45,11 +45,11 @@
                                         <strong>English</strong></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="login.php"><strong>Log In</strong></a>
+                                    <a class="nav-link" href="accout/login.php"><strong>Log In</strong></a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="signup.php"><strong>Sign Up</strong> </a>
+                                    <a class="nav-link" href="accout/signup.php"><strong>Sign Up</strong> </a>
                                 </li>
                             </ul>
 

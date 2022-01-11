@@ -47,10 +47,10 @@
                                     <strong>English</strong></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="login.php"><b>Log In</b></a>
+                                <a class="nav-link active" aria-current="page" href="accout/login.php"><b>Log In</b></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="SignUp/signup.php"><b>Sign Up</b></a>
+                                <a class="nav-link active" aria-current="page" href="accout/signup.php"><b>Sign Up</b></a>
                             </li>
                         </ul>
                     </div>
@@ -131,46 +131,46 @@
         </div>
         <!-- List Event -->
         <div class="list_groups">
-            <?php 
-                 require ('C:\xampp\htdocs\CongNgheWeb_Team25\post\post_connect.php');
-                 $sql = "SELECT idPost,title,images,openday,address FROM posts";
-                 $result = mysqli_query($conn, $sql);
-                if(mysqli_num_rows($result) > 0){
-                while ($row=mysqli_fetch_array($result)){
-                    $imageURL = 'photo/'.$row["images"];
-                    
+            <?php
+            require('C:\xampp\htdocs\CongNgheWeb_Team25\post\post_connect.php');
+            $sql = "SELECT idPost,title,images,openday,address FROM posts";
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_array($result)) {
+                    $imageURL = 'photo/' . $row["images"];
+
+            ?>
+                    <div class="row g-0 position-relative">
+                        <div class="col-md-6 mb-md-0 p-md-3">
+                            <img src="<?php echo $imageURL;  ?>" class="group_image" alt="...">
+                        </div>
+                        <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
+
+                            <h7 style="color: #999966">Openday: <?php echo $row['openday'];   ?></h7>
+                            <h5 class="mt-0" style="color: black;"><?php echo $row['title']; ?></h5>
+                            <div class="mt-2">
+                                <p><?php echo $row['address']; ?> </p>
+                            </div>
+                            <a href="post/post_view.php?id=<?php echo $row['idPost']; ?>" class="stretched-link"></a>
+                        </div>
+                        <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
+                            24 attendees
+                    <?php
+                }
+            }
+            // Bước 04: Đóng kết nối Database Server
+            mysqli_close($conn);
                     ?>
-            <div class="row g-0 position-relative">
-                <div class="col-md-6 mb-md-0 p-md-3">
-                    <img src="<?php echo $imageURL;  ?>" class="group_image" alt="...">
-                </div>
-                <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
-                
-                    <h7 style="color: #999966">Openday: <?php echo $row['openday'];   ?></h7>
-                    <h5 class="mt-0" style="color: black;"><?php echo $row['title']; ?></h5>
-                    <div class="mt-2">
-                        <p><?php echo $row['address']; ?> </p>
+                        </div>
                     </div>
-                    <a href="post/post_view.php?id=<?php echo $row['idPost']; ?>" class="stretched-link"></a>
-                </div>
-                <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
-                    24 attendees
-             <?php
-                     }
-                  }
-                        // Bước 04: Đóng kết nối Database Server
-                mysqli_close($conn);
-              ?>
-                </div>
-            </div>
-            <hr>
+                    <hr>
 
         </div>
     </main>
     <!-- Footer -->
     <footer>
         <?php
-        include("footer_B/footer_1.php");
+        include("template/footer_1.php");
         ?>
     </footer>
 
