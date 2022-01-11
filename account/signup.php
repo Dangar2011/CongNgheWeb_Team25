@@ -64,7 +64,7 @@
                     </div>
                     <div class="email">
                         <button class="bnt mt-3">
-                            <a href="signup-gmail.php" class="text-decoration-none" style="color: black;">
+                            <a href="../account/signup-gmail.php" class="text-decoration-none" style="color: black;">
                                 <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-email-seo-dreamstale-lineal-dreamstale.png" />
                                 Sign up with Email
                             </a>
