@@ -40,7 +40,6 @@
                 </tr>
             </table>
         </form>
-        <h2>Old Post </h2>
         <?php //require 'C:\xampp\htdocs\CongNgheWeb_Team25\post\post_load.php';?>
     </body>
 

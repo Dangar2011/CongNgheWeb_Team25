@@ -17,7 +17,7 @@
         <div class="top_narbar">
             <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand ms-4" href="#"><img src="image/meetup-logo-1.png" style="height: 32px; width: 100px;" alt=""></a>
+                    <a class="navbar-brand ms-4" href="index.php"><img src="image/meetup-logo-1.png" style="height: 32px; width: 100px;" alt=""></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -133,11 +133,12 @@
         <div class="list_groups">
             <?php 
                  require ('C:\xampp\htdocs\CongNgheWeb_Team25\post\post_connect.php');
-                 $sql = "SELECT title,images,content,openday,address FROM posts";
+                 $sql = "SELECT idPost,title,images,openday,address FROM posts";
                  $result = mysqli_query($conn, $sql);
                 if(mysqli_num_rows($result) > 0){
                 while ($row=mysqli_fetch_array($result)){
                     $imageURL = 'photo/'.$row["images"];
+                    
                     ?>
             <div class="row g-0 position-relative">
                 <div class="col-md-6 mb-md-0 p-md-3">
@@ -145,12 +146,12 @@
                 </div>
                 <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
                 
-                    <h7 style="color: #999966"><?php echo $row['openday'];   ?></h7>
+                    <h7 style="color: #999966">Openday: <?php echo $row['openday'];   ?></h7>
                     <h5 class="mt-0" style="color: black;"><?php echo $row['title']; ?></h5>
                     <div class="mt-2">
                         <p><?php echo $row['address']; ?> </p>
                     </div>
-                    <a href="signup.html" class="stretched-link"></a>
+                    <a href="post/post_view.php?id=<?php echo $row['idPost']; ?>" class="stretched-link"></a>
                 </div>
                 <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
                     24 attendees
@@ -163,40 +164,7 @@
                 </div>
             </div>
             <hr>
-            <!-- <div class="row g-0 position-relative">
-                <div class="col-md-6 mb-md-0 p-md-3 ">
-                    <img src="image/idea_to_ipo_events.webp" class="group_image" alt="...">
-                </div>
-                <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
-                    <h7 style="color: #999966">SUN, JAN 9 @ 12:00 PM 2022</h7>
-                    <h5 class="mt-0" style="color: black;">How Non-Techies Can Launch Successful Tech Startups</h5>
-                    <div class="mt-2">
-                        <p>Group name:Ha Noi Startup: Idea to IPO • Ha Noi, VN</p>
-                    </div>
-                    <a href="signup.html" class="stretched-link"></a>
-                </div>
-                <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
-                    8 attendees
-                </div>
-            </div>
-            <hr>
-            <div class="row g-0 position-relative">
-                <div class="col-md-6 mb-md-0 p-md-3">
-                    <img src="image/yoga_events.webp" class="group_image" alt="...">
-                </div>
-                <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
-                    <h7 style="color: #999966">SUN, JAN 9 @ 9:45 AM 2022</h7>
-                    <h5 class="mt-0" style="color: black;">
-                        Ha Noi Sunday Free Online Guided Meditation- Beginners and Intermediate</h5>
-                    <div class="mt-2">
-                        <p>Group name:Ha Noi Sahaja Yoga Meditation • Ha Noi, VN</p>
-                    </div>
-                    <a href="signup.html" class="stretched-link"></a>
-                </div>
-                <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
-                    24 attendees
-                </div>
-            </div> -->
+
         </div>
     </main>
     <!-- Footer -->
