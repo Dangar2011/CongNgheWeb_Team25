@@ -3,19 +3,19 @@
 require 'post_connect.php';
 $statusMsg = '';//tạo 1 biến để lưu lại trạng thái upload nhằm mục tiêu phản hồi lại cho người dùng
 //những động tác về thiết lập cho việc chuẩn bị upload
-$targetDir = "photo/";//thư mục chỉ định nằm trong cùng project để lưu trữ tập tin tải lên
-$fileName = basename($_FILES["image"]["name"]); //$_files là 1 biến siêu toàn cục lưu trữ toàn bộ phần tử file trên FORM
+$targetDir = "../photo/";//thư mục chỉ định nằm trong cùng project để lưu trữ tập tin tải lên
+$fileName = basename($_FILES["txtImage"]["name"]); //$_files là 1 biến siêu toàn cục lưu trữ toàn bộ phần tử file trên FORM
 
 $targetFilePath = $targetDir . $fileName;//Đây là tên đầy đủ+đường dẫn tệp tin sau khi hoàn thành
 //nó là giá trị cần truyền vào hàm movie_uploaded_file
-
+$title = $_POST['txtTitle'];
+$content = $_POST['txtContent'];
+$openday=$_POST['txtOpenday'];
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);//bắt định dạng tệp tin
 
 //b2 kiểmtra xem người dùng đã nhấn submit chưa và file đã được chọn chưa
-if(isset($_POST["btn_Upload"]) && !empty($_FILES["image"]["name"])){
-    $title = $_POST['title'];
-    $content = $_POST['content'];
-    $openday=$_POST['openday'];
+if(isset($_POST["btn_Upload"]) && !empty($_FILES["txtImage"]["name"])){
+    
     //check file tồn tại
     if (file_exists($targetFilePath)) {
       echo "Sorry, file already exists.";
@@ -25,11 +25,12 @@ if(isset($_POST["btn_Upload"]) && !empty($_FILES["image"]["name"])){
     //thì xử lý upload cái tệp tin đang lưu ở thư mục tạmC:\xampp\tmp_name\($_FILES["myFile"]["name"])
     if(in_array($fileType, $allowTypes)){
         // Upload file to server
-        if(move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath)){//lấy từ nơi tạm vào nơi chính
+        if(move_uploaded_file($_FILES["txtImage"]["tmp_name"], $targetFilePath)){//lấy từ nơi tạm vào nơi chính
             // lưu đường dẫn vào CSDL
             //$insert = $db->query("INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
-            $sql="INSERT into posts ( title ,content,image,openday,created ) VALUES ('".$title."', '".$content."', '".$image."','".$openday."', NOW())";
+            $sql="INSERT into posts ( title ,content,image,openday,created ) VALUES ('".$title."', '".$content."', '".$fileName."','".$openday."', NOW())";
             $insert=mysqli_query($conn,$sql);
+           
            if($insert){//kiểm tra việc query thành công
                 $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
                 //header("location:show.php");

@@ -1,10 +1,10 @@
 <?php
 if (isset($_POST['update_posts'])){
 $id=$_GET['idPost'];
-$title=$_POST['title'];
-$content=$_POST['content'];
-$image=$_POST['image'];
-$openday=$_POST['openday'];
+$title=$_POST['txtTitle'];
+$content=$_POST['txtContent'];
+$image=$_POST['txtImage'];
+$openday=$_POST['txtOpenday'];
  
 $sql = "UPDATE posts SET title='$title', content='$content', image='$image',openday='$openday' WHERE idPost='$id'";
  

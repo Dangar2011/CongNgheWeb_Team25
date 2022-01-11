@@ -16,23 +16,23 @@
                 <tr>
                     <td width="230">Title: </td>
                     
-                    <td width="550"><input type="text" name="title" /></td>
+                    <td width="550"><input type="text" name="txtTitle" /></td>
                 </tr>
                 <tr>
                     <td>Content: </td>
-                    <td><textarea name="content" id="content" placeholder="Write Content.." class="noidung" rows="10"
+                    <td><textarea id="content" name="txtContent" placeholder="Write Content.." class="noidung" rows="10"
                             cols="80"></textarea></td>
                 </tr>
                 <tr>
                     <td>Image: </td>
                     <td>
-                        <input type="file" name="image" class="hinhanh"><br /><br />
+                        <input type="file" name="txtImage" class="imgPost"><br /><br />
                     </td>
                 </tr>
 
                 <tr>
                     <td>Openday</td>
-                    <td> <input style="height:40px;width:100%;" type="date" id="openday" name="openday"></input></td>
+                    <td> <input style="height:40px;width:100%;" type="date" id="openday" name="txtOpenday"></input></td>
                 </tr>
                 <tr>
                     <td colspan="2" align="center"><input type="submit" name="btn_Upload" value="Add Post" /></td>
