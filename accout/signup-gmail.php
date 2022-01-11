@@ -33,7 +33,7 @@
                 </div>
                 <!-- Form_Sign up_gmail -->
                 <div class="form_gmail mt-4">
-                    <form action="active_Accout.php">
+                    <form action="active_accout.php">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label"><strong>Your name</strong></label>
                             <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
