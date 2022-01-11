@@ -30,8 +30,8 @@ function sendEmailLogin($email)
         $mail->CharSet = "UTF-8";
 
         //Recipients
-        $mail->setFrom('15ptbang01@gmail.com', 'Meetup');
-        $mail->addAddress($email);     //Add a recipient
+        $mail->setFrom('15ptbang01@gmail.com', 'Meet Up');
+        $mail->addAddress('trongbang1501@gmail.com');     //Add a recipient
         //$mail->addAddress('ellen@example.com');               //Name is optional
         //$mail->addReplyTo('info@example.com', 'Information');
         //$mail->addCC('cc@example.com');
@@ -47,9 +47,13 @@ function sendEmailLogin($email)
         $mail->Body    = 'Bạn đã đăng ký thành công tài khoản Meetup. <a href="#">Trang chủ Meet Up</a>';
         //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-        $mail->send();
-        echo 'Message has been sent';
+        if($mail->send()){
+            return true;
+        }
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
+    return false;
 }
+
+?>
