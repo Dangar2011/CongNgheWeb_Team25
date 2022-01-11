@@ -88,7 +88,7 @@
     <!-- Footer -->
     <footer>
         <?php
-        include("footer.php");
+        include("footer_B/footer_1.php");
         ?>
     </footer>
 
