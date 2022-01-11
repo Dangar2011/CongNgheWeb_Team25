@@ -50,7 +50,7 @@
                                 <a class="nav-link active" aria-current="page" href="login.php"><b>Log In</b></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="signup.php"><b>Sign Up</b></a>
+                                <a class="nav-link active" aria-current="page" href="SignUp/signup.php"><b>Sign Up</b></a>
                             </li>
                         </ul>
                     </div>
@@ -170,7 +170,7 @@
     <!-- Footer -->
     <footer>
         <?php
-        include("footer.php");
+        include("footer_B/footer_1.php");
         ?>
     </footer>
 

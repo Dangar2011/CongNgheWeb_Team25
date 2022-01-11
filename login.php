@@ -31,7 +31,7 @@
           </div>
           <div class="main_form container">
             <p>Not a member yet?</p>
-            <a href="signup.php" class="text-decoration-none ms-1">Sign up</a>
+            <a href="SignUp/signup.php" class="text-decoration-none ms-1">Sign up</a>
           </div>
 
         </div>
@@ -96,7 +96,7 @@
 
   <!-- Footer -->
   <?php
-  include("footer.php");
+  include("footer_B/footer_1.php");
   ?>
 
 
