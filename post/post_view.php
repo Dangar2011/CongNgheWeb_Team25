@@ -134,12 +134,18 @@
                     while ($row=mysqli_fetch_array($result)){
                     $imageURL = '../photo/'.$row["images"];
                 ?>
-                    <?php    echo $row['title']; ?>
+                   <h3 align="center"> <strong><?php    echo $row['title']; ?></strong> </h3> 
+                    <?php echo "<br>"?>   
                     <img  width="50%" height="50%"src="<?php echo $imageURL;  ?>" alt="...">
-                     <?php echo $row['content']; ?>              
-                  <?php  echo $row['openday']; ?>
-                  <?php  echo $row['address'];        ?>     
+                    <?php echo "<br>"?>   
+                    <p><?php echo $row['content']; ?> </p> 
+                     <?php echo "<br>"?>             
+                  <?php  echo $row['openDay']; ?>
+                  <?php echo "<br>"?>   
+                  <?php  echo $row['address'];?>     
+                  <?php echo "<br>"?>   
                  <?php  echo $row['created'];?>
+                 <?php echo "<br>"?>   
                  <?php   
                     }
                 } else{
