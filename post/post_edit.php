@@ -13,18 +13,24 @@
     $row=mysqli_fetch_assoc($query);
 ?>
     <form method="POST" class="form">
-        <h2>Edit post</h2>
-        <label>Title:<br />
-            <input type="text" value="<?php echo $row['title']; ?>" name="title" id="title" /></label><br />
-        <label>Content:<br />
-            <textarea value="" name="content" id="content" rows="10" cols="80" /><?php echo $row['content']; ?></textarea></label><br />
-        <label>Image: <br />
-            <input type="text" value="<?php echo $row['image']; ?>" name="image" /></label><br />
-        <label>Title:<br />
-            <input type="date" value="<?php echo $row['openday']; ?>" name="openday" id="openday" /></label><br />
-        <input type="submit" value="Update" name="update_posts">
+        <table>
+            <h2>Edit post</h2>
+            <label>Title:<br />
+                <input type="text" value="<?php echo $row['title']; ?>" name="title" id="title" /></label><br />
+            <label>Content:<br />
+                <textarea value="" name="content" id="content" rows="10"
+                    cols="80"><?php echo $row['content']; ?></textarea></label><br />
+            <label>Image: <br />
+                <input type="text" value="<?php echo $row['image']; ?>" name="image" /></label><br />
+            <label>Openday:<br />
+                <input type="date" value="<?php echo $row['openday']; ?>" name="openday" id="openday" /></label><br />
+            <input type="submit" value="Update" name="update_posts">
+        </table>
+
         <?php require_once 'post_update.php';?>
     </form>
+
+
 </body>
 
 </html>
