@@ -1,15 +1,15 @@
 <?php
-$usename = '15ptbang01@gmail.com';
-$password = 'zpvpsysvotngfzxu';
+$username = '15ptbang01@gmail.com';
 
+$password = 'vzixogjtebsvrqfu';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require 'PHPmailer/Exception.php';
-require 'PHPmailer/PHPMailer.php';
-require 'PHPmailer/SMTP.php';
+require '../PHPmailer/Exception.php';
+require '../PHPmailer//PHPMailer.php';
+require '../PHPmailer/SMTP.php';
 
 function sendEmailForAccountActive($email){
     global $username;
@@ -42,7 +42,7 @@ function sendEmailForAccountActive($email){
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = '[CSE485] Điểm danh Tuần 20-27/12 ';
-        $mail->Body    = 'Bạn đã đăng ký thành công tài khoản Meetup. <a href="#">Trang chủ Meet Up</a>';
+        $mail->Body    = 'Mã sinh viên: 1951060586   ; Họ và tên:Đinh Văn Đảng';
         //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     
         $mail->send();
@@ -56,4 +56,3 @@ function sendEmailForAccountActive($email){
 
 
 ?>
-

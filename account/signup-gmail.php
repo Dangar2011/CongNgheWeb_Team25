@@ -40,8 +40,8 @@
                             <div id="yourname" class="form-text">Your name with be public on Your meetup profile.</div>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label"><strong>Email ddress</strong></label>
-                            <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+                            <label for="exampleFormControlInput1" class="form-label"><strong>Email address</strong></label>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="example@gmail.com">
                             <div id="emailaddress" class="form-text">We’ll use your email address to send you updates.
                             </div>
                         </div>
@@ -64,7 +64,7 @@
                                     I am 18 years of age or older.</label>
                             </div>
                         </div>
-                        <button type="submit" class="btn_signup" style="font-size: 20px;"><a href=""></a><strong>Sign up</strong></button>
+                        <button name= "btn_signup" type="submit" class="btn_signup" style="font-size: 20px;"><a href=""></a><strong>Sign up</strong></button>
                     </form>
                     <!-- Main footer -->
                     <div class="mt-3 me-5" style="text-align: center;">
