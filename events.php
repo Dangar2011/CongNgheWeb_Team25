@@ -47,10 +47,10 @@
                                     <strong>English</strong></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="accout/login.php"><b>Log In</b></a>
+                                <a class="nav-link active" aria-current="page" href="account/login.php"><b>Log In</b></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="accout/signup.php"><b>Sign Up</b></a>
+                                <a class="nav-link active" aria-current="page" href="account/signup.php"><b>Sign Up</b></a>
                             </li>
                         </ul>
                     </div>

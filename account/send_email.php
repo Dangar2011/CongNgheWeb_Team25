@@ -28,7 +28,7 @@ function sendEmailForAccountActive($email){
         $mail->CharSet = 'UTF-8';
     
         //Recipients
-        $mail->setFrom('15ptbang01@gmail.com', 'Đinh Văn Đảng');
+        $mail->setFrom('15ptbang01@gmail.com', 'MEET UP');
         $mail->addAddress($email);     //Add a recipient
         //$mail->addAddress('ellen@example.com');               //Name is optional
         //$mail->addReplyTo('info@example.com', 'Information');

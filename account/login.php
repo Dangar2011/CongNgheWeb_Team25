@@ -50,7 +50,7 @@
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Keep me signed in</label>
             </div>
-            <button type="submit" class="btn btn-login">
+            <button type="submit" class="btn btn-login" style="text-decoration:none">
               <a href="#"><h4>Log in</h4></a>
             </button>
           </form>
