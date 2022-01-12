@@ -36,22 +36,22 @@
                     <form action="active_account.php" method="post">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label"><strong>Your name</strong></label>
-                            <input  type="text" id="name" class="form-control"  aria-describedby="emailHelp">
+                            <input  type="text" id="name" class="form-control"  aria-describedby="emailHelp" pattern="^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$" required />
                             <div id="yourname" class="form-text">Your name with be public on Your meetup profile.</div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label"><strong>Email address</strong></label>
-                            <input type="text" id="email" name="email" class="form-control" placeholder="example@gmail.com">
+                            <input type="text" id="email" name="email" class="form-control" placeholder="example@gmail.com" pattern="^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$" required />
                             <div id="emailaddress" class="form-text">We’ll use your email address to send you updates.
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label"><strong>Password</strong></label>
-                            <input type="password" id="password" class="form-control" >
+                            <input type="password" id="password" class="form-control" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" pattern="[a-zA-Z0-9!@#$%^&*]{8,}" required />
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputlocation" class="form-label"><strong>Location</strong></label>
-                            <input type="text" id="location" class="form-control"  placeholder="City or zip code">
+                            <input type="text" id="location" class="form-control"  placeholder="City or zip code" required pattern="\S+"/>
                             <div id="emailaddress" class="form-text">We’ll use your location to show Meetup events near
                                 you..</div>
                         </div>
@@ -97,3 +97,6 @@
 </body>
 
 </html>
+
+
+ <!-- pattern="" required : Bắt lỗi form bằng HTML5-->
