@@ -1,7 +1,7 @@
 <?php
 include 'post_connect.php';
-if(isset($_REQUEST['idPost']) and $_REQUEST['idPost']!=""){
-$id=$_GET['idPost'];
+if(isset($_REQUEST['id']) and $_REQUEST['id']!=""){
+$id=$_GET['id'];
 $sql = "DELETE FROM posts WHERE idPost='$id'";
 if ($conn->query($sql) === TRUE) {
 echo "Delete complete!";

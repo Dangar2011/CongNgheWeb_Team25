@@ -1,17 +1,22 @@
 <?php
+    include ("../post/post_connect.php");    
     //bấm button search chưa
-    if(isset($_REQUEST['find'])){
+    
+    if(isset($_REQUEST['btnSearch'])){
         //gắn hàm chống sql injection
-        $search = addslashes($_GET['seacrh'])
+        $search = addslashes($_GET['seacrh']);
+        $find = addslashes($_GET['find']);
         //Nếu rỗng thì báo chưa nhập
         if(empty($search)){
-            echo "yêu cầu nhập vào ô trống";
+            header("location:../events.php");
         }       
         else{
+            
             //dùng lệnk LIKE để tìm thông tin
-            $query ="SELECT * FROM tbl_post WHERE username LIKE '%$search%'";
+            $sql ="SELECT * FROM posts WHERE title LIKE '%$search%' AND address like '%$find%'";
+            
             //ket noi sql
-            include ("account/dbConfig.php")
+            
             //Đếm số đong trả về trong sql
             $num =mysqli_num_row($sql);
             //nếu có kết quả thì hiển thị ko thì thông báo
@@ -34,5 +39,4 @@
             }
         }
     }
-
 ?>

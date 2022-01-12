@@ -19,24 +19,24 @@
 </head>
 <body>
     <!-- Narbar -->
-    <header class="container-fluid bg-white position-fixed">
+    <header class="container-fluid bg-white position-fixed" style="padding-bottom:0px">
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="container-fluid">
                             <div class="col-md-6 row">
                                 <div class="col-md-2 ">
-                                    <a class="navbar-brand" href="#">
+                                    <a class="navbar-brand" href="home.php">
                                     <img src="image/meetup-logo-1.png" class="logochange"alt="">
                                     </a>
                                 </div>
                                 <div class="col-md-6 ">
-                                    <div class="input-group mb-3">
+                                    <div class="mb-3">                             
+                                        <form action="find/process-search.php" method="get" class="input-group mb-3" >
                                         <input type="text" class="form-control" name="search" placeholder="Search for keywords"
                                             aria-label="">
-                                        <input type="text" class="form-control" placeholder="New York,NY" aria-label="">
-                                        <form action="find/process-search.php" method="get">
-                                            <button class="btn btn-outline-secondary bg-danger" type="submit" name="find" style="boder-top-left-radius:0px;boder-top-left-radius:0px">
+                                        <input type="text" class="form-control" placeholder="New York,NY" name="find" aria-label="">
+                                            <button class="btn btn-outline-secondary bg-danger" type="submit" name="btnSearch" style="boder-top-left-radius:0px;boder-top-left-radius:0px">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 20 20"style="color:white">
                                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                                             </svg>
@@ -114,7 +114,7 @@
                                         <div class="card-content">
                                             <h4 class="card-content-title">Find your first event</h4>
                                             <p class="card-content-text">Events are happening 24/7. What do you want to do?</p>
-                                            <a class="btn-card" href="#">Discover Events</a>
+                                            <a class="btn-card" href="events.php">Discover Events</a>
                                         </div>
                                     </div>
                                     
@@ -130,7 +130,7 @@
                                         <div class="card-content">
                                             <h4 class="card-content-title">Join your first group</h4>
                                             <p class="card-content-text">As a member, you’ll receive updates each time your group schedules new events.</p>
-                                            <a class="btn-card" href="#">Join group</a>
+                                            <a class="btn-card" href="groups.php">Join group</a>
                                         </div>
                                     </div>
                                 
@@ -153,7 +153,7 @@
                                 <h2>
                                     <strong>Find your next event:</strong>
                                 </h2>
-                                <form action="">
+                                <form action="find/process-search.php">
                                     <div class="row g-3" style="width: 92.5%;">
                                         <div class="col"> 
                                             <input type="text" class="form-control" placeholder="Search for tennis"
@@ -176,7 +176,7 @@
                                         <input style="height:40px;width:100%;" type="date" id="birthday" name="birthday"></input>
                                         </div>
                                     </div>
-                                    <button class="btn btn-outline-success mt-4" type="submit"
+                                    <button class="btn btn-outline-success mt-4" type="submit" name="btnSearch"
                                         style="width:90%;background-color: red;color: white;border-radius: 10px;"><strong>Search</strong></button>
                                 </form>
 

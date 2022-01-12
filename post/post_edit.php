@@ -7,7 +7,7 @@
     <?php
 // Kết nối Database
     require_once 'C:\xampp\htdocs\CongNgheWeb_Team25\post\post_connect.php';
-    $id=$_GET['idPost'];
+    $id=$_GET['id'];
     $sql1="SELECT * FROM posts WHERE idPost='$id'";
     $query=mysqli_query($conn,$sql1);
     $row=mysqli_fetch_assoc($query);
