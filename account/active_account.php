@@ -1,5 +1,5 @@
 <?php
-
+    
     if(isset($_POST['btn_signup'])){
         if(isset($_POST['email']) && $_POST['email']!=''){
          include  "send_email.php"; 
@@ -10,5 +10,5 @@
               echo 'email chua gui';
             }
         }
-    }   
+    }  
 ?>

@@ -13,8 +13,8 @@
       <div class="col-md">
         Your Account
         <ul class="menu list-unstyled">
-          <li><a href="accout/signup.php" style="text-decoration:none; color: rgb(197, 196 ,196)">Sign up</a></li>
-          <li><a href="accout/login.php" style="text-decoration:none; color: rgb(197, 196 ,196) ">Log in</a></li>
+          <li><a href="../account/signup.php" style="text-decoration:none; color: rgb(197, 196 ,196)">Sign up</a></li>
+          <li><a href="../account/login.php" style="text-decoration:none; color: rgb(197, 196 ,196) ">Log in</a></li>
           <li><a href="#" style="text-decoration:none; color: rgb(197, 196 ,196) ">Help</a></li>
         </ul>
       </div>
@@ -51,8 +51,8 @@
         <a href="#" class="int ms-2"><img src="https://img.icons8.com/bubbles/50/000000/apple-camera.png" /></a>
       </div>
       <div class="ms-auto col-md-auto">
-        <a href="#" class="google_play"><img src="image/google_play.svg" alt=""></a>
-        <a href="#" class="apple_store"><img src="image/apple_store.svg" alt=""></a>
+        <a href="#" class="google_play"><img src="../image/google_play.svg" alt=""></a>
+        <a href="#" class="apple_store"><img src="../image/apple_store.svg" alt=""></a>
       </div>
 
     </div>
