@@ -59,7 +59,7 @@
                         <div class="mb-3">
                             <label for="exampleInputage" class="form-label"><strong>Age</strong><i class="bi bi-exclamation-circle ms-1"></i></label>
                             <div class="form-check">
-                                <input type="checkbox" id="Check1" class="form-check-input" >
+                                <input type="checkbox" id="Check1" class="form-check-input" required pattern="\S+"/>
                                 <label class="form-check-label" for="exampleCheck1">
                                     I am 18 years of age or older.</label>
                             </div>
