@@ -7,7 +7,7 @@
         $search = addslashes($_GET['seacrh']);
         $find = addslashes($_GET['find']);
         //Nếu rỗng thì báo chưa nhập
-        if(empty($search)){
+        if(empty($search) && empty($find)){
             header("location:../events.php");
         }       
         else{
