@@ -62,6 +62,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mb-0 mb-lg-0 ">
                                 <button class="nav-item bg-white border-0">
+                                    <a class="text-decoration-none link-primary"href="post/post_add.php">Add Post</a>
                                     <a class="nav-link text-decoration-none link-primary"
                                         style="color:rgb(170, 170 ,170);" href="#">Start a new group-30% off!</a>
                                 </button>

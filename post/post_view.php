@@ -148,8 +148,8 @@
                 </div>
 
                 <div class="col-md-6">
-                    <div class="sticky">
-                        <div class="card-item">
+                    <div class="sticky" style="margin-top:30px;border-radius:10px;">
+                        <div class="card-item" style="">
                             <div class="card-content">
                                 <a class="link-primary text-decoration-none" href="../groups.php">
                                     <h5 class="card-content-title">Created: <?php  echo $row['created'];?></h5>

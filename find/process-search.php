@@ -13,7 +13,7 @@
         else{
             
             //dùng lệnk LIKE để tìm thông tin
-            $sql ="SELECT * FROM posts WHERE title LIKE '%$search%' AND address like '%$find%'";
+            $sql ="SELECT * FROM posts WHERE title LIKE '%$search%' OR address like '%$find%'";
             
             //ket noi sql
             
@@ -39,4 +39,5 @@
             }
         }
     }
+    mysqli_close($conn);
 ?>

@@ -37,21 +37,21 @@
         </div>
         <!-- Form -->
         <div class="form_login">
-          <form>
+          <form action="../account/process-login.php" method="post">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label"><strong>Email</strong></label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" pattern="^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$" required />
+              <label for="exampleInputEmail1" class="form-label" ><strong>Email</strong></label>
+              <input type="email" class="form-control" name="txtEmail" id="exampleInputEmail1" aria-describedby="emailHelp" pattern="^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$" required />
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label"><strong>Password</strong></label>
-              <input type="password" class="form-control" id="exampleInputPassword1" pattern="[a-zA-Z0-9!@#$%^&*]{8,}" required />
+              <label for="exampleInputPassword1" class="form-label" ><strong>Password</strong></label>
+              <input type="password" class="form-control"name="txtPassWord" id="exampleInputPassword1" pattern="[a-zA-Z0-9!@#$%^&*]{8,}" required />
             </div>
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Keep me signed in</label>
             </div>
-            <button type="submit" class="btn btn-login" style="text-decoration:none">
-              <a href="#"><h4>Log in</h4></a>
+            <button type="submit" class="btn btn-login" style="text-decoration:none" name="btnSignIn">
+              <h4>Log in</h4>
             </button>
           </form>
         </div>
