@@ -40,11 +40,11 @@
           <form>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label"><strong>Email</strong></label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" pattern="^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$" required />
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label"><strong>Password</strong></label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <input type="password" class="form-control" id="exampleInputPassword1" pattern="[a-zA-Z0-9!@#$%^&*]{8,}" required />
             </div>
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
