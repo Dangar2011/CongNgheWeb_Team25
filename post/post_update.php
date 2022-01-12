@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['update_posts'])){
-$id=$_GET['idPost'];
+$id=$_GET['id'];
 $title=$_POST['txtTitle'];
 $content=$_POST['txtContent'];
 $image=$_POST['txtImage'];

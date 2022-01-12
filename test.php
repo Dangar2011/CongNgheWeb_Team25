@@ -14,8 +14,9 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
 
-    <link rel="shortcut icon" href="../image/Meetup_Logo.png">
-    <link rel="stylesheet" href="../css/style-post-view.css">
+    <link rel="shortcut icon" href="image/Meetup_Logo.png">
+    <link rel="stylesheet" href="css/style-post-view.css">
+    <link rel="stylesheet" href="js/js2.js">
 
 </head>
 
@@ -28,18 +29,17 @@
                     <div class="container-fluid">
                         <div class="col-md-6 row">
                             <div class="col-md-2 ">
-                                <a class="navbar-brand" href="../home.php">
-                                    <img src="../image/meetup-logo-1.png" class="logochange" alt="">
+                                <a class="navbar-brand" href="#">
+                                    <img src="image/meetup-logo-1.png" class="logochange" alt="">
                                 </a>
                             </div>
                             <div class="col-md-6 ">
-                                <div class="mb-3">
-
-                                    <form action="find/process-search.php" method="get" class="input-group ">
-                                        <input type="text" class="form-control" name="search"
-                                            placeholder="Search for keywords" aria-label="">
-                                        <input type="text" class="form-control" placeholder="New York,NY" name="find" aria-label="">
-                                        <button class="btn btn-outline-secondary bg-danger" type="submit" name="btnSearch"
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" name="search"
+                                        placeholder="Search for keywords" aria-label="">
+                                    <input type="text" class="form-control" placeholder="New York,NY" aria-label="">
+                                    <form action="find/process-search.php" method="get">
+                                        <button class="btn btn-outline-secondary bg-danger" type="submit" name="find"
                                             style="boder-top-left-radius:0px;boder-top-left-radius:0px">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-search" viewBox="0 0 20 20"
@@ -87,7 +87,7 @@
                                 <button class="flex-shrink-0 dropdown bg-white border-0">
                                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle"
                                         id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="../image/Meetup_Logo.png" alt="mdo" width="32" height="32"
+                                        <img src="image/Meetup_Logo.png" alt="mdo" width="32" height="32"
                                             class="rounded-circle">
                                     </a>
                                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
@@ -109,77 +109,121 @@
             </div>
             <hr>
         </div>
-
+       
 
 
     </header>
-
+    
     <main class="container">
-        <?php
-                require_once '../post/post_connect.php';
-                 $id=$_GET['id'];
-                 $sql = "SELECT * FROM posts WHERE idPost='$id'";
-                $result = mysqli_query($conn, $sql);       
-                if(mysqli_num_rows($result) > 0){                   
-                    while ($row=mysqli_fetch_array($result)){
-                    $imageURL = '../photo/'.$row["images"];
-                ?>
-
-        <div class="sticky">
-            <p><Strong>Openday: </Strong><?php  echo $row['openDay']; ?></p>
-            <h4> <strong><?php    echo $row['title']; ?></strong> </h4>
-
+    <div class="sticky ">
+            <p>Thursday, January 20, 2022</p>
+            <h4>Grand Central Murder Mystery & Scavenger Hunt</h4>
+        
         </div>
-        <div style="background-color:white;">
-            <a href="groups.php" class="link-primary text-decoration-none"><img src="../image/Meetup_Logo.png" alt="mdo"
-                    width="40" height="40" class="rounded-circle">
+        <a href="groups.php" class="link-primary text-decoration-none"><img src="image/Meetup_Logo.png" alt="mdo" width="40" style="background-color:white;"
+                    height="40" class="rounded-circle">
                 <h6>Lou S.</h6>
             </a>
-        </div>
-
-        <hr>
+            <hr>
         <div class="col-md-12">
             <div class="row">
 
                 <div class="col-md-6">
-                    <img src="<?php echo $imageURL;  ?>" width="660" height="370" alt="">
+                    <img src="image/event-1.jpg" width="660" height="370" alt="">
                     <h4 class="mt-3"> <strong>Details</strong></h4>
-                    <p><?php echo $row['content']; ?> </p>
+                    <p>
+                        *GET TICKETS AT -
+                        https://dljparty.ticketleap.com/grand-central-murder-mystery--scavenger-hunt/dates/ (For your
+                        safety, this event will be operating at a limited capacity. Tickets will sell out quickly.
+                        Vaccinated only. )
+
+                        Join us after work for a safe & social adventure at our Grand Central Murder Mystery Scavenger
+                        Hunt.
+                        You don’t need any special skills for this activity. Get ready to have fun making new friends
+                        and
+                        solving a mystery. Plus, you'll find out things about Grand Central you never knew before!
+
+                        How It Works:
+                        * When you arrive we will put you on teams - if you don’t already have one (90% of those
+                        attending
+                        will not have a team).
+
+                        * Each team will be given a list of clues and 75 minutes to head to Grand Central to try and
+                        uncover
+                        the mystery of Mary’s demise.
+
+                        *The team with the most points wins!
+
+                        * Once everyone is back we'll safely socialize where you can share your experiences with the
+                        others.
+
+                        The Theme:
+                        Meet Up Mary is a regular on the social circuit in New York. You'd probably know her if you've
+                        been
+                        out before. She was very personable, friendly and bubbly! Unfortunately Mary met a horrific end
+                        at
+                        Grand Central and the police need you help to solve her case! Join us for this fun and
+                        educational
+                        night where you will get to explore every corner of the NYC Landmark in ways that you never have
+                        before! (If you have participated in our other Grand Central Hunts no worries as this is a
+                        completely different experience)
+
+                        COVID-19 Protocols:
+                        *This event has been posted as a Vaccinated Only event. You'll need to show your vaccination
+                        card
+                        (photo is fine) or Excelsior app. Face masks are recommended.
+
+                        *PURCHASE TICKET AT -
+                        https://dljparty.ticketleap.com/grand-central-murder-mystery--scavenger-hunt/dates/ (*$20-$30
+                        depending upon how early you purchase. NOT sold at door.)</p>
                 </div>
 
                 <div class="col-md-6">
                     <div class="sticky">
                         <div class="card-item">
-                            <div class="card-content">
-                                <a class="link-primary text-decoration-none" href="../groups.php">
-                                    <h5 class="card-content-title">Created: <?php  echo $row['created'];?></h5>
-                                </a>
-                                <a class="link-primary text-decoration-none" href="../groups.php">
-                                    <h5 class="card-content-title">Address: <?php  echo $row['address'];?></h5>
-                                </a>
-                            </div>
+                        <div class="card-img">
+                            <!-- image -->
+
+                        </div>
+                        <div class="card-content">
+                            <a class="btn-card" href="groups.php">
+                                <h4 class="card-content-title">Group Name</h4>
+                            </a>
                         </div>
                     </div>
+                    <div class="card-item">
+                        <div class="card-img">
+                            <!-- image -->
+
+                        </div>
+                        <div class="card-content">
+                            <a class="btn-card" href="groups.php">
+                                <h4 class="card-content-title">Group Name</h4>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                    
+
                 </div>
+
+
             </div>
+
+
         </div>
 
 
-        <?php   
-                    }
-                } 
 
-               
-               ?>
 
 
 
     </main>
 
-
+    
     <?php
-    include ("../template/footer.php");
-    ?>
+    include ("template/footer.php");
+?>
 
 
 

@@ -1,0 +1,52 @@
+.card-item {
+    display: flex;
+    height: 220px;
+    width: 550px;
+    padding: 25px 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: white;
+}
+
+.logochange {
+    width: 95px;
+    height: 35px;
+}
+
+.html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e4e4e4;
+    height: 100vh;
+    /*body chiếm độ cao toàn bộ cửa sổ trình duyệt*/
+}
+
+.card-item {
+    display: flex;
+    height: 220px;
+    width: 550px;
+    padding: 25px 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.card-img {
+    width: 80px;
+    height: 80px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+}
