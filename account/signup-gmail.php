@@ -47,7 +47,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label"><strong>Password</strong></label>
-                            <input type="password" id="exampleInputPassword1" name="password" class="form-control" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" pattern="[a-zA-Z0-9!@#$%^&*]{8,}" required />
+                            <input type="password" id="password" name="password" class="form-control" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" pattern="[a-zA-Z0-9!@#$%^&*]{8,}" required />
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputlocation" class="form-label"><strong>Location</strong></label>
