@@ -11,7 +11,7 @@ require '../PHPmailer/Exception.php';
 require '../PHPmailer//PHPMailer.php';
 require '../PHPmailer/SMTP.php';
 
-function sendEmailForAccountActive($email)
+function sendEmailForAccountActive($email, $link)
 {
     global $username;
     global $password;
@@ -43,7 +43,7 @@ function sendEmailForAccountActive($email)
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = 'Please Confirm Your Email Address';
-        $mail->Body    = 'Get started on your new journey. <a href="">Comfirm my Email</a>';
+        $mail->Body    = 'Get started on your new journey.'.$link;
         //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         if ($mail->send()) {

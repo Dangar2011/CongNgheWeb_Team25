@@ -104,3 +104,6 @@
 </body>
 
 </html>
+
+
+<!-- pattern="" required : Bắt lỗi form bằng HTML5-->
