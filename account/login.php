@@ -44,7 +44,7 @@
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label"><strong>Password</strong></label>
-              <input type="password" class="form-control" name="txtPassWord" id="exampleInputPassword1" pattern="[a-zA-Z0-9!@#$%^&*]{8,}" required />
+              <input type="password" class="form-control" name="txtPassWord" id="exampleInputPassword1" pattern="\S+" required />
             </div>
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">

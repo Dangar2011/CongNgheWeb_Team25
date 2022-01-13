@@ -7,7 +7,7 @@ if (isset($_POST['btn_signup']) && $_POST['email']) // Kiểm tra người dùng
     $result = mysqli_query($conn, "SELECT * FROM users WHERE email='" . $_POST['email'] . "'");
     $row = mysqli_num_rows($result);
     // Xử lý kết quả
-    if ($row <= 0) // Kiểm tra xem email được dùng chưa
+    if ($row >= 0) // Kiểm tra xem email được dùng chưa
     {
         $token = md5($_POST['email']) . rand(10, 9999); // Sử dụng dải thuật md5 sinh ra 1 chuỗi ngẫu nhiên
         // Lưu thông tin đăng ký vào PHPMySQL

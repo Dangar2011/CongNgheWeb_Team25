@@ -43,7 +43,7 @@ function sendEmailForAccountActive($email, $link)
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = 'Please Confirm Your Email Address';
-        $mail->Body    = 'Get started on your new journey.'.$link;
+        $mail->Body    = 'Get started on your new journey...'.$link;
         //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         if ($mail->send()) {
