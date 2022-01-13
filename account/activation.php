@@ -34,7 +34,7 @@
                 $msg = "You have already verified your account with us";
             }
         } else {
-            $msg = "This email has been not registered with us";
+            $msg = "This email has been registered with us. ";
         }
     } else {
         $msg = "Danger! Your something goes to wrong.";
@@ -43,7 +43,7 @@
     <div class="container mt-3">
         <div class="card">
             <div class="card-header text-center">
-                User Account Activation by Email Verification using PHP
+                User Account Activation by Email
             </div>
             <div class="card-body">
                 <p>
