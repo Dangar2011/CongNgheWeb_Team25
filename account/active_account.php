@@ -18,11 +18,11 @@ if (isset($_POST['btn_signup']) && $_POST['email']) // Kiểm tra người dùng
         mysqli_query($conn, $sql);
 
         //Sau khi lưu xong gửi xác nhận đến email để người dùng kích hoạt 
-        $link = "<a href='localhost/email-verification/verify-email.php?key=" . $_POST['email'] . "&token=" . $token . "'>Comfirm my Email</a>";
+        $link = "<a href='localhost/congngheweb_team25/account/activation.php?key=" . $email . "&token=" . $token . "'>Comfirm my Email</a>";
         // Quá trình gửi email
         include  "send_email.php";
         if (sendEmailForAccountActive($email, $link)) {
-            echo 'Message has been sent';
+            echo 'Message has been sent. Check email';
         } else {
             echo 'Message could not be sent.';
         }
