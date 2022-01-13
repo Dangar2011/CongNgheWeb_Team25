@@ -4,10 +4,10 @@
         if(isset($_POST['email']) && $_POST['email']!=''){
          include  "send_email.php"; 
              if(sendEmailForAccountActive($_POST['email'])){  
-             echo'Email da gui';
+             echo'Message has been sent';
        
              }else{
-              echo 'email chua gui';
+              echo 'Message could not be sent.';
             }
         }
     }  
