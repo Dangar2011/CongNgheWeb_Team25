@@ -17,40 +17,40 @@
     //b2 kiểmtra xem người dùng đã nhấn submit chưa và file đã được chọn chưa
     if(isset($_POST["btn_Upload"]) && !empty($_FILES["txtImage"]["name"])){
     
-    //check file tồn tại
-    if (file_exists($targetFilePath)) {
-      $statusMsg= "Sorry, file already exists.";
-    }
-    else{
+        //check file tồn tại
+        // if (file_exists($targetFilePath)) {
+        //   $statusMsg= "Sorry, file already exists.";
+        // }
+        // else{
         
             // Khai báo biến mảng để lưu trữ định dạng mà bạn cho phép up lên
-    $allowTypes = array('jpg','png','jpeg');// phương thức in_array kiểm tra 1 giá trị có thuộc mảng không
-    //thì xử lý upload cái tệp tin đang lưu ở thư mục tạmC:\xampp\tmp_name\($_FILES["myFile"]["name"])
-    if(in_array($fileType, $allowTypes)){
-        // Upload file to server
-        if(move_uploaded_file($_FILES["txtImage"]["tmp_name"], $targetFilePath)){//lấy từ nơi tạm vào nơi chính
-            // lưu đường dẫn vào CSDL
-            //$insert = $db->query("INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
-            $sql="INSERT into posts ( title ,content,images,address,openday,created ) VALUES ('".$title."', '".$content."', '".$fileName."','".$address."','".$openday."', NOW())";
-            $insert=mysqli_query($conn,$sql);
-           
-           if($insert){//kiểm tra việc query thành công
-                $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-                //header("location:show.php");
-                // echo "<pre>";
-                // echo print_r($_FILES['myFile']);
-                // echo "<pre>";
+        $allowTypes = array('jpg','png','jpeg');// phương thức in_array kiểm tra 1 giá trị có thuộc mảng không
+        //thì xử lý upload cái tệp tin đang lưu ở thư mục tạmC:\xampp\tmp_name\($_FILES["myFile"]["name"])
+        if(in_array($fileType, $allowTypes)){
+            // Upload file to server
+            if(move_uploaded_file($_FILES["txtImage"]["tmp_name"], $targetFilePath)){//lấy từ nơi tạm vào nơi chính
+                // lưu đường dẫn vào CSDL
+                //$insert = $db->query("INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
+                $sql="INSERT into posts ( title ,content,images,address,openday,created ) VALUES ('".$title."', '".$content."', '".$fileName."','".$address."','".$openday."', NOW())";
+                $insert=mysqli_query($conn,$sql);
+            
+            if($insert){//kiểm tra việc query thành công
+                    $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
+                    //header("location:show.php");
+                    // echo "<pre>";
+                    // echo print_r($_FILES['myFile']);
+                    // echo "<pre>";
+                    }else{
+                    $statusMsg = "File upload failed, please try again.";
+                
+                    } 
                 }else{
-                $statusMsg = "File upload failed, please try again.";
-              
-                } 
+                $statusMsg = "Sorry, there was an error uploading your file.";
+                }
             }else{
-            $statusMsg = "Sorry, there was an error uploading your file.";
+            $statusMsg = 'Sorry, only JPG, JPEG, PNG are allowed to upload.';
             }
-        }else{
-        $statusMsg = 'Sorry, only JPG, JPEG, PNG are allowed to upload.';
-        }
-    }
+        //}
 
     }else{
         $statusMsg = 'Please select a file to upload.';

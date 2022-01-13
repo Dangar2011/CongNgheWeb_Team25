@@ -150,7 +150,7 @@
                             <h7 style="color: #999966">Openday: <?php echo $row['openday'];   ?></h7>
                             <h5 class="mt-0" style="color: black;"><?php echo $row['title']; ?></h5>
                             <div class="mt-2">
-                                <p><?php echo $row['address']; ?> </p>
+                                <p>Address: <?php echo $row['address']; ?> </p>
                             </div>
                             <a href="post/post_view.php?id=<?php echo $row['idPost']; ?>" class="stretched-link"></a>
                         </div>

@@ -1,14 +1,16 @@
 <?php
-include 'post_connect.php';
+include '../post/post_connect.php';
 if(isset($_REQUEST['id']) and $_REQUEST['id']!=""){
 $id=$_GET['id'];
 $sql = "DELETE FROM posts WHERE idPost='$id'";
-if ($conn->query($sql) === TRUE) {
-echo "Delete complete!";
-} else {
-echo "Error updating record: " . $conn->error;
+$delete=mysqli_query($conn,$delete)
+
+if($delete){//kiểm tra việc query thành công
+    echo "Delete successful!";
+    }else{
+    echo = "File upload failed, please try again.";
+
 }
-$conn->close();
-}
-header("Location: post_add.php");
+mysqli_close($conn);
+header("Location: ../events.php");
 ?>

@@ -1,6 +1,7 @@
 <head>
-    <title>Update</title>
+    <title>Edit Post</title>
     <link rel="stylesheet" href="css/style_add_post.css" />
+    <link rel="shortcut icon" href="../image/Meetup_Logo.png">
 </head>
 
 <body>
@@ -11,26 +12,70 @@
     $sql1="SELECT * FROM posts WHERE idPost='$id'";
     $query=mysqli_query($conn,$sql1);
     $row=mysqli_fetch_assoc($query);
+    $imageURL = '../photo/'.$row["images"];
 ?>
-    <form method="POST" class="form">
+    <!-- <form method="POST" class="form" action="../post/post_update.php">
         <table>
             <h2>Edit post</h2>
-            <label>Title:<br />
-                <input type="text" value="<?php echo $row['title']; ?>" name="title" id="title" /></label><br />
-            <label>Content:<br />
-                <textarea value="" name="content" id="content" rows="10"
+            
+            <label style="display:flex;">Title:<br />
+                <input style="display:flex;" type="text" value="<?php echo $row['title']; ?>" name="txtTitle"
+                    id="title" /></label><br />
+            <label style="display:flex;">Content:<br />
+                <textarea style="display:flex;" value="" name="txtContent" id="content" rows="10"
                     cols="80"><?php echo $row['content']; ?></textarea></label><br />
-            <label>Image: <br />
-                <input type="text" value="<?php echo $row['image']; ?>" name="image" /></label><br />
-            <label>Openday:<br />
-                <input type="date" value="<?php echo $row['openday']; ?>" name="openday" id="openday" /></label><br />
-            <input type="submit" value="Update" name="update_posts">
+            <label style="display:flex;">Image: <br />
+                <input style="display:flex;" type="file" value="<?php echo $imageURL; ?>" name="txtImage" /></label><br />
+            <img style="display:flex;" src="<?php  echo $imageURL?>" alt="">
+            <label style="display:flex;margin-top:10px;">Address:<br />
+                <input style="display:flex;"type="text" value="<?php echo $row['address']; ?>" name="txtAddress"
+                    id="address" /></label><br />
+            <label style="display:flex;">Openday:<br />
+                <input style="display:flex;" type="date" value="<?php echo $row['openDay']; ?>" name="txtOpenday"
+                    id="openday" /></label><br />
+            <input type="submit" value="Update" name="update_post">
         </table>
 
-        <?php require_once 'post_update.php';?>
-    </form>
+    </form> -->
+    <form action="../post/post_update.php" enctype="multipart/form-data" method="post" class="form" >
+            <table width="600" height="600" border="1" cellspacing="5" cellpadding="5" align="center">
+                <tr>
+                    <td width="230">Title: </td>
+                    
+                    <td> <input  style="height:40px;width:99%;" type="text" value="<?php echo $row['title']; ?>" name="txtTitle"
+                    id="title" /></label></td>
+                </tr>
+                <tr>
+                    <td>Content: </td>
+                    <td><textarea  value="" name="txtContent" id="content" rows="10"
+                    cols="80"><?php echo $row['content']; ?></textarea></td>
+                </tr>
+                <tr>
+                    <td>Image: </td>
+                    <td>
+                    <input  type="file" value="<?php echo $imageURL; ?>" name="txtImage" /><br />
+                    <h5>Old Image:</h5> <img  src="<?php  echo $imageURL?>" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address: </td>
+                    <td><input  style="height:40px;width:99%;" type="text" value="<?php echo $row['address']; ?>" name="txtAddress"
+                    id="address" /><br/><br /></td>
+                </tr>
 
-
+                <tr>
+                    <td>Openday</td>
+                    <td>  <input  style="height:40px;width:99%;" type="date" value="<?php echo $row['openDay']; ?>" name="txtOpenday"
+                    id="openday" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" name="btn_Update" value="Add Post" /></td>
+                </tr>
+            </table>
+        </form>
+<?php
+  
+?>
 </body>
 
 </html>

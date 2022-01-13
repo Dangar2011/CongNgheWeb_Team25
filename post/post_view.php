@@ -38,8 +38,10 @@
                                     <form action="find/process-search.php" method="get" class="input-group ">
                                         <input type="text" class="form-control" name="search"
                                             placeholder="Search for keywords" aria-label="">
-                                        <input type="text" class="form-control" placeholder="New York,NY" name="find" aria-label="">
-                                        <button class="btn btn-outline-secondary bg-danger" type="submit" name="btnSearch"
+                                        <input type="text" class="form-control" placeholder="New York,NY" name="find"
+                                            aria-label="">
+                                        <button class="btn btn-outline-secondary bg-danger" type="submit"
+                                            name="btnSearch"
                                             style="boder-top-left-radius:0px;boder-top-left-radius:0px">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-search" viewBox="0 0 20 20"
@@ -157,6 +159,15 @@
                                 <a class="link-primary text-decoration-none" href="../groups.php">
                                     <h5 class="card-content-title">Address: <?php  echo $row['address'];?></h5>
                                 </a>
+                                <div class="row">
+                                    <div class="col"><a class="link-primary text-decoration-none"
+                                            href="post_edit.php?id=<?php echo $row['idPost']; ?>">Edit</a> </div>
+                                    <div class="col"><a class="link-primary text-decoration-none"
+                                            href="post_delete.php?id=<?php echo $row['idPost']; ?>">Delete</a> </div>
+                                </div>
+
+
+
                             </div>
                         </div>
                     </div>
@@ -191,8 +202,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-
-    <script src="js/script.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous"></script>
