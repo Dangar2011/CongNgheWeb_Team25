@@ -164,6 +164,8 @@
                                             href="post_edit.php?id=<?php echo $row['idPost']; ?>">Edit</a> </div>
                                     <div class="col"><a class="link-primary text-decoration-none"
                                             href="post_delete.php?id=<?php echo $row['idPost']; ?>">Delete</a> </div>
+                                    <div class="col"><a class="link-primary text-decoration-none"
+                                            href="../events.php">Back</a> </div>
                                 </div>
 
 
