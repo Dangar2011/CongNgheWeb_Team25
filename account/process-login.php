@@ -17,7 +17,7 @@
 
         $result = mysqli_query($conn,$sql);
 
-        if(mysqli_num_rows($result) == 1){
+        if(mysqli_num_rows($result) > 0){
             // CẤP THẺ LÀM VIỆC
             $_SESSION['isLoginOK'] = $email;
             header("location: ../home.php"); //Chuyển hướng về Trang quản trị
