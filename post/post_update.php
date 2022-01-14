@@ -1,23 +1,10 @@
 <?php
- require("../post/post_connect.php");
-// if (isset($_POST['update_post'])){
-// $id=$_GET['id'];
-// $title=$_POST['txtTitle'];
-// $content=$_POST['txtContent'];
-// $image=$_POST['txtImage'];
-// $openday=$_POST['txtOpenday'];
  
-// $sql = "UPDATE posts SET title='$title', content='$content', images='$image',openDay='$openday' WHERE idPost='$id'";
- 
-// if ($conn->query($sql) === TRUE) {
-// echo "<b>Record updated successfully</b>";
-// } else {
-// echo "Error updating record: " . $conn->error;
-// }
- 
-// mysqli_close($conn);
-// }
+ if(isset($_POST['txtidPost'])){
+    $id=$_POST['txtidPost'];
+}
 
+require("../post/post_connect.php");
      // Trước khi cho người dùng xâm nhập vào bên trong
     // Phải kiểm tra THẺ LÀM VIỆC
     // session_start();
@@ -30,7 +17,7 @@
     $fileName = basename($_FILES["txtImage"]["name"]); //$_files là 1 biến siêu toàn cục lưu trữ toàn bộ phần tử file trên FORM
     $targetFilePath = $targetDir . $fileName;//Đây là tên đầy đủ+đường dẫn tệp tin sau khi hoàn thành
     //nó là giá trị cần truyền vào hàm movie_uploaded_file
-    $id=$_GET['txtIdPost'];
+    
     $title = $_POST['txtTitle'];
     $content = $_POST['txtContent'];
     $openday=$_POST['txtOpenday'];
@@ -53,10 +40,8 @@
                 $update=mysqli_query($conn,$sql);    
                 if($update){//kiểm tra việc query thành công
                     $statusMsg = "Update successful!";
-                    //header("location:show.php");
-                    // echo "<pre>";
-                    // echo print_r($_FILES['myFile']);
-                    // echo "<pre>";
+                        header("location:post_view.php?id=".$id);
+                    
                     }  else{
                     $statusMsg = "File upload failed, please try again.";
                 
@@ -70,9 +55,20 @@
             }
     
 
-    }else{
-        $statusMsg = 'Please select a file to upload.';
     }
+    if(isset($_POST["btn_Update"]) && empty($_FILES["txtImage"]["name"])){
+        $sql = "UPDATE posts SET title='$title', content='$content',openDay='$openday',address='$address' WHERE idPost='$id'";
+                $update=mysqli_query($conn,$sql);    
+                if($update){//kiểm tra việc query thành công
+                    $statusMsg = "Update successful!";
+                        header("location:post_view.php?id=".$id);
+                    
+                    }  else{
+                    $statusMsg = "File upload failed, please try again.";
+                
+                    } 
+    }
+
     // Display status message
 //     <script type="text/javascript">
 //   var alertMsg = '<?php echo $statusMsg;>';

@@ -35,7 +35,7 @@
                             </div>
                             <div class="col-md-6 ">
                                 <div class="mb-3">
-                                    <form action="find/process-search.php" method="get" class="input-group mb-3">
+                                    <form action="process-search.php" method="get" class="input-group mb-3">
                                         <input type="text" class="form-control" name="search"
                                             placeholder="Search for keywords" aria-label="">
                                         <input type="text" class="form-control" placeholder="New York,NY" name="find"
