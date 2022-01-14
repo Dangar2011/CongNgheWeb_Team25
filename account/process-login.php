@@ -13,7 +13,7 @@
             die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
         }
         // Bước 02: Thực hiện truy vấn
-        $sql = "SELECT * FROM users WHERE email = '$email' AND password ='$pass'";
+        $sql = "SELECT * FROM users WHERE email = '$email' AND password ='$pass' AND status = '1'" ;
         // Ở đây còn có các vấn đề về tính hợp lệ dữ liệu nhập vào FORM
         // Nghiêm trọng: lỗi SQL Injection
 
@@ -23,8 +23,8 @@
             $_SESSION['isLoginOK'] = $email;
             header("location:../home.php"); //Chuyển hướng đến trang chủ
         }else{
-            echo ( "Bạn nhập thông tin Email hoặc mật khẩu chưa chính xác");
-            header("location:../account/login.php"); //Chuyển hướng, hiển thị thông báo lỗi
+            echo ( "Bạn nhập thông tin Email hoặc mật khẩu chưa chính xác. (Check email để kích hoạt tài khoản)");
+            //header("location:../account/login.php"); //Chuyển hướng, hiển thị thông báo lỗi
         }
 
         // Bước 03: Đóng kết nối
