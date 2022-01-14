@@ -7,7 +7,6 @@
         $email = $_POST['txtEmail'];
         $pass  = $_POST['txtPassWord'];
         //Ở đây còn phải kiểm tra người dùng đã nhập chưa
-
         // Bước 01: Kết nối Database Server
         $conn = mysqli_connect('localhost','root','','btl');
         if(!$conn){
@@ -24,8 +23,8 @@
             $_SESSION['isLoginOK'] = $email;
             header("location:../home.php"); //Chuyển hướng đến trang chủ
         }else{
-            $error = "Bạn nhập thông tin Email hoặc mật khẩu chưa chính xác";
-            header("location: login.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
+            echo ( "Bạn nhập thông tin Email hoặc mật khẩu chưa chính xác");
+            header("location:../account/login.php"); //Chuyển hướng, hiển thị thông báo lỗi
         }
 
         // Bước 03: Đóng kết nối
