@@ -49,7 +49,7 @@
                     id="openday" /></td>
                 </tr>
                 <tr>
-                    <td colspan="2" align="center"><input type="submit" name="btn_Update" value="Edit Post" />
+                    <td colspan="2" align="center"><input type="submit" name="btn_Update" value="Update Post" />
                 
                 </tr>
             </table>

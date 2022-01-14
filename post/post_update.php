@@ -1,5 +1,5 @@
 <?php
- require("../post/post_connect.php");
+ 
 // if (isset($_POST['update_post'])){
 // $id=$_GET['id'];
 // $title=$_POST['txtTitle'];
@@ -17,7 +17,8 @@
  
 // mysqli_close($conn);
 // }
-
+$id=$_GET['id'];
+require("../post/post_connect.php");
      // Trước khi cho người dùng xâm nhập vào bên trong
     // Phải kiểm tra THẺ LÀM VIỆC
     // session_start();
@@ -30,7 +31,7 @@
     $fileName = basename($_FILES["txtImage"]["name"]); //$_files là 1 biến siêu toàn cục lưu trữ toàn bộ phần tử file trên FORM
     $targetFilePath = $targetDir . $fileName;//Đây là tên đầy đủ+đường dẫn tệp tin sau khi hoàn thành
     //nó là giá trị cần truyền vào hàm movie_uploaded_file
-    $id=$_GET['txtIdPost'];
+    
     $title = $_POST['txtTitle'];
     $content = $_POST['txtContent'];
     $openday=$_POST['txtOpenday'];
