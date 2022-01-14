@@ -1,8 +1,7 @@
 <?php
 $id=$_GET['id'];
+
 include '../post/post_connect.php';
-
-
 $sql = "DELETE FROM posts WHERE idPost='$id'";
 $delete = mysqli_query($conn,$sql);
 

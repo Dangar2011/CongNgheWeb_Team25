@@ -15,7 +15,7 @@
 <body>
   <header>
     <nav class="navbar">
-      <a class="navbar-brand ms-4" href="#"><img src="../image/meetup-logo-1.png" style="height: 34px; width: 100px;" alt=""></a>
+      <a class="navbar-brand ms-4" href="../index.php"><img src="../image/meetup-logo-1.png" style="height: 34px; width: 100px;" alt=""></a>
     </nav>
   </header>
   <!-- Main -->
@@ -50,7 +50,7 @@
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Keep me signed in</label>
             </div>
-            <button type="submit" class="btn btn-login" style="text-decoration:none" name="btnSignIn">
+            <button type="submit" class="btn btn-login" style="text-decoration:none" name="btnLogIn">
               <h4>Log in</h4>
             </button>
           </form>

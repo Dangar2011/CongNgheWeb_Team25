@@ -21,11 +21,11 @@
       <div class="col-md">
         Discover
         <ul class="menu list-unstyled">
-          <li><a href="groups.php" style="text-decoration:none; color: rgb(197, 196 ,196) ">Groups</a></li>
+          <li><a href="../groups.php" style="text-decoration:none; color: rgb(197, 196 ,196) ">Groups</a></li>
           <li><a href="#" style="text-decoration:none; color: rgb(197, 196 ,196) ">Calendar</a></li>
           <li><a href="#" style="text-decoration:none; color: rgb(197, 196 ,196) ">Topics</a></li>
           <li><a href="#" style="text-decoration:none; color: rgb(197, 196 ,196) ">Cities</a></li>
-          <li><a href="events.php" style="text-decoration:none; color: rgb(197, 196 ,196) ">Online Events</a></li>
+          <li><a href="../events.php" style="text-decoration:none; color: rgb(197, 196 ,196) ">Online Events</a></li>
           <li><a href="#" style="text-decoration:none; color: rgb(197, 196 ,196) ">Local Guides</a></li>
         </ul>
       </div>
