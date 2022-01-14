@@ -16,11 +16,10 @@
         // Nghiêm trọng: lỗi SQL Injection
 
         $result = mysqli_query($conn,$sql);
-
         if(mysqli_num_rows($result) > 0){
             // CẤP THẺ LÀM VIỆC
             $_SESSION['isLoginOK'] = $email;
-            header("location: ../home.php"); //Chuyển hướng về Trang quản trị
+            header("location: ../home.php"); //Chuyển hướng đe Trang đã đăng nhập
         }else{
             $error = "Bạn nhập thông tin Email hoặc mật khẩu chưa chính xác";
            echo "Error: ".$error;
