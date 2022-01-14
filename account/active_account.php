@@ -13,7 +13,7 @@ if (isset($_POST['btn_signup']) && $_POST['email']) // Kiểm tra người dùng
         // Lưu thông tin đăng ký vào PHPMySQL
         $user = $_POST['name'];
         $email = $_POST['email'];
-        $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $pass = $_POST['password'];
         $sql = "INSERT INTO users(name, email, email_verification_link ,password) VALUES('$user', '$email', '$token', '$pass')";
         mysqli_query($conn, $sql);
 

@@ -3,7 +3,7 @@
     session_start();
 
     //login.php TRUYỀN DỮ LIỆU SANG: NHẬN DỮ LIỆU TỪ login.php gửi sang
-    if(isset($_POST['btnSignIn'])){
+    if(isset($_POST['btnLogIn'])){
         $email = $_POST['txtEmail'];
         $pass  = $_POST['txtPassWord'];
         //Ở đây còn phải kiểm tra người dùng đã nhập chưa
@@ -17,7 +17,7 @@
 
         $result = mysqli_query($conn,$sql);
 
-        if(mysqli_num_rows($result) > 0){
+        if(mysqli_num_rows($result) < 0){
             // CẤP THẺ LÀM VIỆC
             $_SESSION['isLoginOK'] = $email;
             header("location: ../home.php"); //Chuyển hướng về Trang quản trị
