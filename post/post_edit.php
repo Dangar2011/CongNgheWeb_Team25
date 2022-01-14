@@ -17,8 +17,13 @@
 ?>
     <form action="../post/post_update.php" enctype="multipart/form-data" method="post" class="form" >
             <table width="600" height="600" border="1" cellspacing="5" cellpadding="5" align="center">
+                
+                  
+                        <input type="hidden" readonly id="txtidPost" name="txtidPost" value= <?php echo $row['idPost']?>>
+                  
+                
                 <tr>
-                    <input type="hidden" name="txtIdPost" value=" <?php echo $idPost ?>">
+                    
                     
                     <td width="230">Title: </td>
                     

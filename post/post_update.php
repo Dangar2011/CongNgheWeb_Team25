@@ -1,23 +1,9 @@
 <?php
  
-// if (isset($_POST['update_post'])){
-// $id=$_GET['id'];
-// $title=$_POST['txtTitle'];
-// $content=$_POST['txtContent'];
-// $image=$_POST['txtImage'];
-// $openday=$_POST['txtOpenday'];
- 
-// $sql = "UPDATE posts SET title='$title', content='$content', images='$image',openDay='$openday' WHERE idPost='$id'";
- 
-// if ($conn->query($sql) === TRUE) {
-// echo "<b>Record updated successfully</b>";
-// } else {
-// echo "Error updating record: " . $conn->error;
-// }
- 
-// mysqli_close($conn);
-// }
-$id=$_GET['id'];
+ if(isset($_POST['txtidPost'])){
+    $id=$_POST['txtidPost'];
+}
+
 require("../post/post_connect.php");
      // Trước khi cho người dùng xâm nhập vào bên trong
     // Phải kiểm tra THẺ LÀM VIỆC
@@ -54,10 +40,8 @@ require("../post/post_connect.php");
                 $update=mysqli_query($conn,$sql);    
                 if($update){//kiểm tra việc query thành công
                     $statusMsg = "Update successful!";
-                    //header("location:show.php");
-                    // echo "<pre>";
-                    // echo print_r($_FILES['myFile']);
-                    // echo "<pre>";
+                        header("location:post_view.php?id=".$id);
+                    
                     }  else{
                     $statusMsg = "File upload failed, please try again.";
                 
