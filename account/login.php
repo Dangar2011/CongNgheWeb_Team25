@@ -15,7 +15,7 @@
 <body>
   <header>
     <nav class="navbar">
-      <a class="navbar-brand ms-4" href="#"><img src="../image/meetup-logo-1.png" style="height: 34px; width: 100px;" alt=""></a>
+      <a class="navbar-brand ms-4" href="../index.php"><img src="../image/meetup-logo-1.png" style="height: 34px; width: 100px;" alt=""></a>
     </nav>
   </header>
   <!-- Main -->
