@@ -125,42 +125,6 @@
           <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png" />
         </div>
       </div>
-      <hr>
-      <div class="row g-0 position-relative">
-        <div class="col-md-6 mb-md-0 p-md-3 ">
-          <img src="image/Sahaja Yoga.jpeg" class="group_image" alt="...">
-        </div>
-        <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
-          <h5 class="mt-0" style="color: black;">Ha Noi Sahaja Yoga Meditation</h5>
-          <h6>HA NOI, VN</h6>
-          <div class="mt-2">
-            <p>Looking for peace, balance, joy, overcome stress, transform and meet other seekers?...</p>
-          </div>
-          <a href="signup.html" class="stretched-link"></a>
-        </div>
-        <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
-          369 members . Public
-          <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png" />
-        </div>
-      </div>
-      <hr>
-      <div class="row g-0 position-relative">
-        <div class="col-md-6 mb-md-0 p-md-3">
-          <img src="image/badminton_event.webp" class="group_image" alt="...">
-        </div>
-        <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
-          <h5 class="mt-0" style="color: black;">Hanoi Badminton</h5>
-          <h6>HA NOI, VN</h6>
-          <div class="mt-2">
-            <p>This group is for Badminton players of all abilities. We will meet regularly to play mainly doubles games....</p>
-          </div>
-          <a href="signup.html" class="stretched-link"></a>
-        </div>
-        <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
-          893 members . Public
-          <img style="height: 20px;" src="https://img.icons8.com/ios-glyphs/30/000000/help.png" />
-        </div>
-      </div>
     </div>
   </main>
   <!-- Footer -->

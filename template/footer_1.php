@@ -56,7 +56,7 @@
       </div>
 
     </div>
-    <div class="p-3 mb-4">
+    <div class="p-3">
         © 2022 Meetup
         <a href="#!" class="text-decoration-none link-primary" style="color: rgb(197, 196 ,196);margin-right:20px; margin-left: 20px;">Terms of Service</a>
         <a href="#!" class="text-decoration-none link-primary"style="color: rgb(197, 196 ,196);;margin-right:20px;">Privacy Policy</a>
