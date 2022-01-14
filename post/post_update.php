@@ -55,9 +55,20 @@ require("../post/post_connect.php");
             }
     
 
-    }else{
-        $statusMsg = 'Please select a file to upload.';
     }
+    if(isset($_POST["btn_Update"]) && empty($_FILES["txtImage"]["name"])){
+        $sql = "UPDATE posts SET title='$title', content='$content',openDay='$openday',address='$address' WHERE idPost='$id'";
+                $update=mysqli_query($conn,$sql);    
+                if($update){//kiểm tra việc query thành công
+                    $statusMsg = "Update successful!";
+                        header("location:post_view.php?id=".$id);
+                    
+                    }  else{
+                    $statusMsg = "File upload failed, please try again.";
+                
+                    } 
+    }
+
     // Display status message
 //     <script type="text/javascript">
 //   var alertMsg = '<?php echo $statusMsg;>';
