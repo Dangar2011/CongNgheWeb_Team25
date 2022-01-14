@@ -13,33 +13,13 @@
     $query=mysqli_query($conn,$sql1);
     $row=mysqli_fetch_assoc($query);
     $imageURL = '../photo/'.$row["images"];
+    $idPost= $row['idPost'];
 ?>
-    <!-- <form method="POST" class="form" action="../post/post_update.php">
-        <table>
-            <h2>Edit post</h2>
-            
-            <label style="display:flex;">Title:<br />
-                <input style="display:flex;" type="text" value="<?php echo $row['title']; ?>" name="txtTitle"
-                    id="title" /></label><br />
-            <label style="display:flex;">Content:<br />
-                <textarea style="display:flex;" value="" name="txtContent" id="content" rows="10"
-                    cols="80"><?php echo $row['content']; ?></textarea></label><br />
-            <label style="display:flex;">Image: <br />
-                <input style="display:flex;" type="file" value="<?php echo $imageURL; ?>" name="txtImage" /></label><br />
-            <img style="display:flex;" src="<?php  echo $imageURL?>" alt="">
-            <label style="display:flex;margin-top:10px;">Address:<br />
-                <input style="display:flex;"type="text" value="<?php echo $row['address']; ?>" name="txtAddress"
-                    id="address" /></label><br />
-            <label style="display:flex;">Openday:<br />
-                <input style="display:flex;" type="date" value="<?php echo $row['openDay']; ?>" name="txtOpenday"
-                    id="openday" /></label><br />
-            <input type="submit" value="Update" name="update_post">
-        </table>
-
-    </form> -->
     <form action="../post/post_update.php" enctype="multipart/form-data" method="post" class="form" >
             <table width="600" height="600" border="1" cellspacing="5" cellpadding="5" align="center">
                 <tr>
+                    <input type="hidden" name="txtIdPost" value=" <?php echo $idPost ?>">
+                    
                     <td width="230">Title: </td>
                     
                     <td> <input  style="height:40px;width:99%;" type="text" value="<?php echo $row['title']; ?>" name="txtTitle"
@@ -54,7 +34,7 @@
                     <td>Image: </td>
                     <td>
                     <input  type="file" value="<?php echo $imageURL; ?>" name="txtImage" /><br />
-                    <h5>Old Image:</h5> <img  src="<?php  echo $imageURL?>" alt="">
+                    <h5>Old Image:</h5> <img  width="660" height="370" src="<?php  echo $imageURL?>" alt="">
                     </td>
                 </tr>
                 <tr>
@@ -69,7 +49,8 @@
                     id="openday" /></td>
                 </tr>
                 <tr>
-                    <td colspan="2" align="center"><input type="submit" name="btn_Update" value="Add Post" /></td>
+                    <td colspan="2" align="center"><input type="submit" name="btn_Update" value="Edit Post" />
+                
                 </tr>
             </table>
         </form>

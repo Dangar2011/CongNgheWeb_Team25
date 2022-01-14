@@ -144,14 +144,14 @@
             <div class="row">
 
                 <div class="col-md-6">
-                    <img src="<?php echo $imageURL;  ?>" width="660" height="370" alt="">
+                    <img src="<?php echo $imageURL;  ?>" width="660" height="370" title="<?php echo "$row[title]";?>"alt="">
                     <h4 class="mt-3"> <strong>Details</strong></h4>
                     <p><?php echo $row['content']; ?> </p>
                 </div>
 
                 <div class="col-md-6">
-                    <div class="sticky" style="margin-top:30px;border-radius:10px;">
-                        <div class="card-item" style="">
+                    <div class="sticky" style="margin-top:30px;border-radius:10px;margin-left:10px;">
+                        <div class="card-item" style=" width:330px height:330px;">
                             <div class="card-content">
                                 <a class="link-primary text-decoration-none" href="../groups.php">
                                     <h5 class="card-content-title">Created: <?php  echo $row['created'];?></h5>

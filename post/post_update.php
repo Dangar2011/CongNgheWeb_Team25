@@ -30,7 +30,7 @@
     $fileName = basename($_FILES["txtImage"]["name"]); //$_files là 1 biến siêu toàn cục lưu trữ toàn bộ phần tử file trên FORM
     $targetFilePath = $targetDir . $fileName;//Đây là tên đầy đủ+đường dẫn tệp tin sau khi hoàn thành
     //nó là giá trị cần truyền vào hàm movie_uploaded_file
-    $id=$_GET['id'];
+    $id=$_GET['txtIdPost'];
     $title = $_POST['txtTitle'];
     $content = $_POST['txtContent'];
     $openday=$_POST['txtOpenday'];
@@ -51,7 +51,7 @@
                 //$sql="INSERT into posts ( title ,content,images,address,openday,created ) VALUES ('".$title."', '".$content."', '".$fileName."','".$address."','".$openday."', NOW())";
                 $sql = "UPDATE posts SET title='$title', content='$content', images='$fileName',openDay='$openday',address='$address' WHERE idPost='$id'";
                 $update=mysqli_query($conn,$sql);    
-            if($update){//kiểm tra việc query thành công
+                if($update){//kiểm tra việc query thành công
                     $statusMsg = "Update successful!";
                     //header("location:show.php");
                     // echo "<pre>";
@@ -80,6 +80,6 @@
 // </script>
 echo "$statusMsg";
 mysqli_close($conn);
-    header ("location:../post/post_view.php?$id");
+   // header ("location:../post/post_view.php?$id");
 ?>
 ?>

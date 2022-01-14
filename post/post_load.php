@@ -40,9 +40,10 @@
                     // echo "<pre>";
                     // echo print_r($_FILES['myFile']);
                     // echo "<pre>";
+                    header("location:../events.php");
                     }else{
                     $statusMsg = "File upload failed, please try again.";
-                
+                    header("location:../post/post_add.php");
                     } 
                 }else{
                 $statusMsg = "Sorry, there was an error uploading your file.";
