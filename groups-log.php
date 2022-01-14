@@ -97,12 +97,12 @@
     <main class="container mt-5 col-sm-10">
         <div class="group row">
             <div class="list-unstyled col-md-1">
-                <a href="events.php" style="text-decoration:none; color: rgb(156, 148, 148)">
+                <a href="events-log.php" style="text-decoration:none; color: rgb(156, 148, 148)">
                     <h4>Events</h4>
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="groups.php" style="color: #006699">
+                <a href="groups-log.php" style="color: #006699">
                     <h4>Groups</h4>
 
                 </a>
