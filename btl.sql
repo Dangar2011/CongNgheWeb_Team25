@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 15, 2022 lúc 05:53 AM
--- Phiên bản máy phục vụ: 10.4.20-MariaDB
--- Phiên bản PHP: 8.0.9
+-- Thời gian đã tạo: Th1 15, 2022 lúc 06:17 AM
+-- Phiên bản máy phục vụ: 10.4.21-MariaDB
+-- Phiên bản PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,6 +40,22 @@ CREATE TABLE `ad` (
 
 INSERT INTO `ad` (`idAdmin`, `username`, `email`, `password`) VALUES
 (1, 'dang', 'dangdinh@gmail.com', 'abc123');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `avtivated`
+--
+
+CREATE TABLE `avtivated` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int(11) NOT NULL DEFAULT 0,
+  `email_verification_link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -141,6 +157,13 @@ ALTER TABLE `ad`
   ADD PRIMARY KEY (`idAdmin`);
 
 --
+-- Chỉ mục cho bảng `avtivated`
+--
+ALTER TABLE `avtivated`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- Chỉ mục cho bảng `comments`
 --
 ALTER TABLE `comments`
@@ -185,6 +208,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `ad`
   MODIFY `idAdmin` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT cho bảng `avtivated`
+--
+ALTER TABLE `avtivated`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT cho bảng `comments`
