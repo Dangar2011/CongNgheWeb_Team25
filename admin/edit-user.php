@@ -42,7 +42,7 @@
                     id="username" /></label></td>
                 </tr>
                 <tr>
-                    <td>Content: </td>
+                    <td>Email: </td>
                     <td><textarea  value="" name="txtEmail" id="Email" rows="10"
                     cols="80"><?php echo $row['email']; ?></textarea></td>
                 </tr>

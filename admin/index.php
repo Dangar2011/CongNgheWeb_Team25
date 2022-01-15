@@ -35,6 +35,10 @@
             <a class="nav-link" id="ex1-tab-2" data-mdb-toggle="tab" href="#ex1-tabs-2" role="tab"
                 aria-controls="ex1-tabs-2" aria-selected="false">Quản lý events</a>
         </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="ex1-tab-2" href="log-out.php" 
+                aria-controls="ex1-tabs-2" aria-selected="false">Log out</a>
+        </li>
         
 
     </ul>
