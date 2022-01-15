@@ -18,7 +18,7 @@ require("../post/post_connect.php");
     // }
     $statusMsg = '';//tạo 1 biến để lưu lại trạng thái upload nhằm mục tiêu phản hồi lại cho người dùng
     //những động tác về thiết lập cho việc chuẩn bị upload
-    $targetDir = "../photo/";//thư mục chỉ định nằm trong cùng project để lưu trữ tập tin tải lên
+    $targetDir = "avatar/";//thư mục chỉ định nằm trong cùng project để lưu trữ tập tin tải lên
     $fileName = basename($_FILES["txtAvatar"]["name"]); //$_files là 1 biến siêu toàn cục lưu trữ toàn bộ phần tử file trên FORM
     $targetFilePath = $targetDir . $fileName;//Đây là tên đầy đủ+đường dẫn tệp tin sau khi hoàn thành
     //nó là giá trị cần truyền vào hàm movie_uploaded_file

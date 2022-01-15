@@ -1,8 +1,8 @@
 <?php
- session_start();
- if(isset($_SESSION['isLoginOK'])){
-     header("location:../account/login.php");
- }
+//  session_start();
+//  if(isset($_SESSION['isLoginOK'])){
+//      header("location:../account/login.php");
+//  }
 
 ?>
 <!DOCTYPE html>
