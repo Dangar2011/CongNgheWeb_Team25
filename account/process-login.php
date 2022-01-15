@@ -13,7 +13,7 @@
             die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
         }
         // Bước 02: Thực hiện truy vấn
-        $sql = "SELECT * FROM users WHERE email = '$email' AND password ='$pass' " ;
+        $sql = "SELECT * FROM activated WHERE email = '$email' AND password ='$pass' " ;
         // Ở đây còn có các vấn đề về tính hợp lệ dữ liệu nhập vào FORM
         // Nghiêm trọng: lỗi SQL Injection
 

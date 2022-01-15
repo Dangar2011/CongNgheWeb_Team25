@@ -14,7 +14,7 @@ if (isset($_POST['btn_signup']) && $_POST['email']) // Kiểm tra người dùng
         $user = $_POST['name'];
         $email = $_POST['email'];
         $pass = $_POST['password'];
-        $sql = "INSERT INTO users(name, email, email_verification_link ,password) VALUES('$user', '$email', '$token', '$pass')";
+        $sql = "INSERT INTO activated(name, email, email_verification_link ,password) VALUES('$user', '$email', '$token', '$pass')";
         mysqli_query($conn, $sql);
 
         //Sau khi lưu xong gửi xác nhận đến email để người dùng kích hoạt 
