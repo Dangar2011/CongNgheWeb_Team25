@@ -1,3 +1,12 @@
+<?php
+  // Trước khi cho người dùng xâm nhập vào bên trong
+    //Phải kiểm tra THẺ LÀM VIỆC
+    session_start();
+    if(!isset($_SESSION['isLoginOK'])){
+        header("location:events-log.php");
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 

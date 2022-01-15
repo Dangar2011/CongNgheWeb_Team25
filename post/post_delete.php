@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['isLoginOK'])){
+    header("location:../index.php");
+}
 $id=$_GET['id'];
 
 include '../post/post_connect.php';
