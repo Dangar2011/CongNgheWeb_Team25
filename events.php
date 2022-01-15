@@ -134,7 +134,7 @@
         <div class="list_groups">
             <?php
             require('C:\xampp\htdocs\CongNgheWeb_Team25\post\post_connect.php');
-            $sql = "SELECT idPost,title,images,openday,address FROM posts";
+            $sql = "SELECT * FROM posts";
             $result = mysqli_query($conn, $sql);
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_array($result)) {
@@ -147,7 +147,7 @@
                         </div>
                         <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
 
-                            <h7 style="color: #999966">Openday: <?php echo $row['openday'];   ?></h7>
+                            <h7 style="color: #999966">Openday: <?php echo $row['openDay'];   ?></h7>
                             <h5 class="mt-0" style="color: black;"><?php echo $row['title']; ?></h5>
                             <div class="mt-2">
                                 <p>Address: <?php echo $row['address']; ?> </p>
@@ -155,7 +155,7 @@
                             <a href="post/post_view.php?id=<?php echo $row['idPost']; ?>" class="stretched-link"></a>
                         </div>
                         <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
-                            24 attendees
+                          
                             <hr>
                     <?php
                 }

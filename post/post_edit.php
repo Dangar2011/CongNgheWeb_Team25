@@ -1,3 +1,12 @@
+<?php
+  // Trước khi cho người dùng xâm nhập vào bên trong
+    // Phải kiểm tra THẺ LÀM VIỆC
+    // session_start();
+    // if(!isset($_SESSION['isLoginOK'])){
+    //     header("location:login.php");
+    // }
+
+?>
 <head>
     <title>Edit Post</title>
     <link rel="stylesheet" href="css/style_add_post.css" />

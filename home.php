@@ -1,3 +1,12 @@
+<?php
+  // Trước khi cho người dùng xâm nhập vào bên trong
+    // Phải kiểm tra THẺ LÀM VIỆC
+    // session_start();
+    // if(!isset($_SESSION['isLoginOK'])){
+    //     header("location:login.php");
+    // }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,7 +71,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mb-0 mb-lg-0 ">
                                 <button class="nav-item bg-white border-0">
-                                    <a class="text-decoration-none link-primary"href="post/post_add.php">Add Post</a>
+                                    <a class="text-decoration-none link-primary" href="post/post_add.php">Add Post</a>
                                     <a class="nav-link text-decoration-none link-primary"
                                         style="color:rgb(170, 170 ,170);" href="#">Start a new group-30% off!</a>
                                 </button>
@@ -237,15 +246,15 @@
                                     <h2>
                                         <strong>Find your next event:</strong>
                                     </h2>
-                                    <form action="find/process-search.php">
+                                    <form action="process-search.php">
                                         <div class="row g-3" style="width: 92.5%;">
                                             <div class="col">
-                                                <input type="text" class="form-control" placeholder="Search for tennis"
-                                                    aria-label="Search for tennis">
+                                                <input type="text" name="search" class="form-control"
+                                                    placeholder="Search for tennis" aria-label="Search for tennis">
                                             </div>
                                             <div class="col">
-                                                <input type="text" class="form-control" placeholder="Location"
-                                                    aria-label="Location">
+                                                <input type="text" name="find" class="form-control"
+                                                    placeholder="Location" aria-label="Location">
                                             </div>
                                         </div>
                                         <div class="row g-3 mt-1" style="width: 92.5%;">
@@ -293,7 +302,8 @@
                             <h3 class="d-inline fw-bold">Attend an event starting soon</h3>
                         </div>
                         <div class="col-md">
-                            <a href="" class="d-inline" style="color: rgb(197, 196 ,196);">Attend an event starting
+                            <a href="events.php" class="d-inline" style="color: rgb(197, 196 ,196);">Attend an event
+                                starting
                                 soon</a>
                         </div>
 
@@ -308,20 +318,28 @@
                                         <div class="col-md-3">
                                             <div class="card" style="border:white;">
                                                 <div class="card-img-2">
-                                                    <a href="">
-                                                        <img src="image/event-1.jpg" class="img-fluid">
+                                                    <?php
+                                                    require_once 'post/post_connect.php';
+                                                    
+                                                    $sql = "SELECT * FROM posts  where idPost='34'" ;
+                                                    $result = mysqli_query($conn, $sql);       
+                                                    if(mysqli_num_rows($result) > 0){                   
+                                                        while ($row=mysqli_fetch_array($result)){
+                                                        $imageURL = 'photo/'.$row["images"];
+                                                    ?>
+                                                    <a href="post/post_view.php?id=34">
+                                                        <img src="<?php echo $imageURL?>" class="img-fluid">
                                                     </a>
 
                                                 </div>
                                                 <div class="px-2">
                                                     <a class="text-decoration-none" href="">
-                                                        <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">MON, JAN 3
-                                                            @ 7:00 AM ICT</h6>
-                                                        <h6 class="fw-bold link-dark"><strong>New York & New Jersey
-                                                                Virtual Dating</strong>
+                                                        <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">
+                                                            <?php echo $row['openDay']?> </h6>
+                                                        <h6 class="fw-bold link-dark">
+                                                            <strong><?php echo $row['title']?></strong>
                                                         </h6>
-                                                        <p class="text-muted mt-3 mb-5">New York
-                                                            Matchmaking Dating
+                                                        <p class="text-muted mt-3 mb-5"><?php echo $row['content']?>
                                                         </p>
                                                     </a>
 
@@ -360,82 +378,42 @@
 
                                         </div>
                                     </div>
+                                    <?php
+                         }
+                        }
+                                ?>
                                     <div class="carousel-item">
                                         <div class="col-md-3">
                                             <div class="card" style="border:white;">
                                                 <div class="card-img-2">
-                                                    <a href=""><img src="image/event-2.jpg" class="img-fluid"></a>
+                                                    <?php
+                                                    require_once 'post/post_connect.php';
+                                                    
+                                                    $sql = "SELECT * FROM posts  where idPost='34'" ;
+                                                    $result = mysqli_query($conn, $sql);       
+                                                    if(mysqli_num_rows($result) > 0){                   
+                                                        while ($row=mysqli_fetch_array($result)){
+                                                        $imageURL = 'photo/'.$row["images"];
+                                                    ?>
+                                                    <a href="post/post_view.php?id=34">
+                                                        <img src="<?php echo $imageURL?>" class="img-fluid">
+                                                    </a>
 
                                                 </div>
                                                 <div class="px-2">
                                                     <a class="text-decoration-none" href="">
-                                                        <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">SAT, JAN 1
-                                                            @ 7:00 AM ICT</h6>
-                                                        <h6 class="fw-bold link-dark"><strong>OASIS CHRISTIAN SINGLES
-                                                                NEW YEARS EVE ZOOM CELEBRATION</strong>
+                                                        <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">
+                                                            <?php echo $row['openDay']?> </h6>
+                                                        <h6 class="fw-bold link-dark">
+                                                            <strong><?php echo $row['title']?></strong>
                                                         </h6>
-                                                        <p class="text-muted mt-3 mb-5">OASIS
-                                                            Tri-State Christian Singles Events
+                                                        <p class="text-muted mt-3 mb-5"><?php echo $row['content']?>
                                                         </p>
                                                     </a>
 
                                                     <div class="avatar mt-4">
                                                         <div class="row ">
                                                             <div class="col">
-                                                                <!-- images -->
-                                                            </div>
-                                                            <div class="col">
-                                                                <a href=""><svg xmlns="http://www.w3.org/2000/svg"
-                                                                        style="color:rgb(197, 196 ,196);margin-left:150px"
-                                                                        width="20" height="20" fill="currentColor"
-                                                                        class="bi bi-box-arrow-up" viewBox="0 0 16 16">
-                                                                        <path fill-rule="evenodd"
-                                                                            d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z" />
-                                                                        <path fill-rule="evenodd"
-                                                                            d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z" />
-                                                                    </svg>
-
-                                                                </a>
-                                                            </div>
-                                                            <div class="col">
-                                                                <a href=""> <svg xmlns="http://www.w3.org/2000/svg"
-                                                                        style="color:rgb(197, 196 ,196);margin-right:50px;"
-                                                                        width="24" height="24" fill="currentColor"
-                                                                        class="bi bi-star" viewBox="0 0 16 16">
-                                                                        <path
-                                                                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
-                                                                    </svg></a>
-
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="col-md-3">
-                                            <div class="card" style="border:white;">
-                                                <div class="card-img-2">
-                                                    <img src="image/event-3.jpg" class="img-fluid">
-                                                </div>
-                                                <div class="px-2">
-                                                    <a class="text-decoration-none" href="">
-                                                        <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">SAT, JAN 1
-                                                            @ 7:00 AM ICT</h6>
-                                                        <h6 class="fw-bold link-dark"><strong>First Ever NYC Young
-                                                                Professionals Book Club Meeting</strong>
-                                                        </h6>
-                                                        <p class="text-muted mt-3 mb-5">NYC Young Professionals Book
-                                                            Club
-                                                        </p>
-                                                    </a>
-
-                                                    <div class="avatar mt-4">
-                                                        <div class="row ">
-                                                            <div class="col">
-                                                                <!-- images -->
                                                             </div>
                                                             <div class="col">
                                                                 <a href=""><svg xmlns="http://www.w3.org/2000/svg"
@@ -465,30 +443,45 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
-                                    <div class="carousel-item">
+                                    <?php
+                         }
+                        }
+                                ?>
+                                    <div class="carousel-item ">
                                         <div class="col-md-3">
                                             <div class="card" style="border:white;">
                                                 <div class="card-img-2">
-                                                    <img src="image/event-4.jpg" class="img-fluid">
+                                                    <?php
+                                                    require_once 'post/post_connect.php';
+                                                    
+                                                    $sql = "SELECT * FROM posts  where idPost='34'" ;
+                                                    $result = mysqli_query($conn, $sql);       
+                                                    if(mysqli_num_rows($result) > 0){                   
+                                                        while ($row=mysqli_fetch_array($result)){
+                                                        $imageURL = 'photo/'.$row["images"];
+                                                    ?>
+                                                    <a href="post/post_view.php?id=34">
+                                                        <img src="<?php echo $imageURL?>" class="img-fluid">
+                                                    </a>
+
                                                 </div>
                                                 <div class="px-2">
                                                     <a class="text-decoration-none" href="">
-                                                        <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">SAT, JAN 1
-                                                            @ 7:00 AM ICT</h6>
-                                                        <h6 class="fw-bold link-dark"><strong>Van Gogh Museum -
-                                                                Amsterdam: Livestream Art Tour</strong>
+                                                        <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">
+                                                            <?php echo $row['openDay']?> </h6>
+                                                        <h6 class="fw-bold link-dark">
+                                                            <strong><?php echo $row['title']?></strong>
                                                         </h6>
-                                                        <p class="text-muted mt-3 mb-5">New York
-                                                            History and Culture
+                                                        <p class="text-muted mt-3 mb-5"><?php echo $row['content']?>
                                                         </p>
                                                     </a>
 
                                                     <div class="avatar mt-4">
                                                         <div class="row ">
                                                             <div class="col">
-                                                                <!-- images -->
                                                             </div>
                                                             <div class="col">
                                                                 <a href=""><svg xmlns="http://www.w3.org/2000/svg"
@@ -518,31 +511,45 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
+                                    <?php
+                         }
+                        }
+                                ?>
                                     <div class="carousel-item">
                                         <div class="col-md-3">
                                             <div class="card" style="border:white;">
                                                 <div class="card-img-2">
-                                                    <img src="image/event-5.jpg" class="img-fluid">
+                                                    <?php
+                                                    require_once 'post/post_connect.php';
+                                                    
+                                                    $sql = "SELECT * FROM posts  where idPost='34'" ;
+                                                    $result = mysqli_query($conn, $sql);       
+                                                    if(mysqli_num_rows($result) > 0){                   
+                                                        while ($row=mysqli_fetch_array($result)){
+                                                        $imageURL = 'photo/'.$row["images"];
+                                                    ?>
+                                                    <a href="post/post_view.php?id=34">
+                                                        <img src="<?php echo $imageURL?>" class="img-fluid">
+                                                    </a>
+
                                                 </div>
                                                 <div class="px-2">
                                                     <a class="text-decoration-none" href="">
-                                                        <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">SAT, JAN 1
-                                                            @ 7:00 AM ICT</h6>
-                                                        <h6 class="fw-bold link-dark"><strong>Online
-                                                                Spanish-English Language Exchange - New Year's
-                                                                Resolution!</strong>
+                                                        <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">
+                                                            <?php echo $row['openDay']?> </h6>
+                                                        <h6 class="fw-bold link-dark">
+                                                            <strong><?php echo $row['title']?></strong>
                                                         </h6>
-                                                        <p class="text-muted mt-3 mb-5">Spanglish
-                                                            Languages and Culture
+                                                        <p class="text-muted mt-3 mb-5"><?php echo $row['content']?>
                                                         </p>
                                                     </a>
 
                                                     <div class="avatar mt-4">
                                                         <div class="row ">
                                                             <div class="col">
-                                                                <!-- images -->
                                                             </div>
                                                             <div class="col">
                                                                 <a href=""><svg xmlns="http://www.w3.org/2000/svg"
@@ -572,8 +579,218 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
+                                    <?php
+                         }
+                        }
+                                ?>
+                                    <div class="carousel-item">
+                                        <div class="col-md-3">
+                                            <div class="card" style="border:white;">
+                                                <div class="card-img-2">
+                                                    <?php
+                                                    require_once 'post/post_connect.php';
+                                                    
+                                                    $sql = "SELECT * FROM posts  where idPost='34'" ;
+                                                    $result = mysqli_query($conn, $sql);       
+                                                    if(mysqli_num_rows($result) > 0){                   
+                                                        while ($row=mysqli_fetch_array($result)){
+                                                        $imageURL = 'photo/'.$row["images"];
+                                                    ?>
+                                                    <a href="post/post_view.php?id=34">
+                                                        <img src="<?php echo $imageURL?>" class="img-fluid">
+                                                    </a>
+
+                                                </div>
+                                                <div class="px-2">
+                                                    <a class="text-decoration-none" href="">
+                                                        <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">
+                                                            <?php echo $row['openDay']?> </h6>
+                                                        <h6 class="fw-bold link-dark">
+                                                            <strong><?php echo $row['title']?></strong>
+                                                        </h6>
+                                                        <p class="text-muted mt-3 mb-5"><?php echo $row['content']?>
+                                                        </p>
+                                                    </a>
+
+                                                    <div class="avatar mt-4">
+                                                        <div class="row ">
+                                                            <div class="col">
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                                                        style="color:rgb(197, 196 ,196);margin-left:150px"
+                                                                        width="20" height="20" fill="currentColor"
+                                                                        class="bi bi-box-arrow-up" viewBox="0 0 16 16">
+                                                                        <path fill-rule="evenodd"
+                                                                            d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z" />
+                                                                        <path fill-rule="evenodd"
+                                                                            d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z" />
+                                                                    </svg>
+
+                                                                </a>
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""> <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        style="color:rgb(197, 196 ,196);" width="24"
+                                                                        height="24" fill="currentColor"
+                                                                        class="bi bi-star" viewBox="0 0 16 16">
+                                                                        <path
+                                                                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                                    </svg></a>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <?php
+                         }
+                        }
+                                ?>
+                                    <div class="carousel-item">
+                                        <div class="col-md-3">
+                                            <div class="card" style="border:white;">
+                                                <div class="card-img-2">
+                                                    <?php
+                                                    require_once 'post/post_connect.php';
+                                                    
+                                                    $sql = "SELECT * FROM posts  where idPost='34'" ;
+                                                    $result = mysqli_query($conn, $sql);       
+                                                    if(mysqli_num_rows($result) > 0){                   
+                                                        while ($row=mysqli_fetch_array($result)){
+                                                        $imageURL = 'photo/'.$row["images"];
+                                                    ?>
+                                                    <a href="post/post_view.php?id=34">
+                                                        <img src="<?php echo $imageURL?>" class="img-fluid">
+                                                    </a>
+
+                                                </div>
+                                                <div class="px-2">
+                                                    <a class="text-decoration-none" href="">
+                                                        <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">
+                                                            <?php echo $row['openDay']?> </h6>
+                                                        <h6 class="fw-bold link-dark">
+                                                            <strong><?php echo $row['title']?></strong>
+                                                        </h6>
+                                                        <p class="text-muted mt-3 mb-5"><?php echo $row['content']?>
+                                                        </p>
+                                                    </a>
+
+                                                    <div class="avatar mt-4">
+                                                        <div class="row ">
+                                                            <div class="col">
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                                                        style="color:rgb(197, 196 ,196);margin-left:150px"
+                                                                        width="20" height="20" fill="currentColor"
+                                                                        class="bi bi-box-arrow-up" viewBox="0 0 16 16">
+                                                                        <path fill-rule="evenodd"
+                                                                            d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z" />
+                                                                        <path fill-rule="evenodd"
+                                                                            d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z" />
+                                                                    </svg>
+
+                                                                </a>
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""> <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        style="color:rgb(197, 196 ,196);" width="24"
+                                                                        height="24" fill="currentColor"
+                                                                        class="bi bi-star" viewBox="0 0 16 16">
+                                                                        <path
+                                                                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                                    </svg></a>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <?php
+                         }
+                        }
+                                ?>
+                                    <div class="carousel-item">
+                                        <div class="col-md-3">
+                                            <div class="card" style="border:white;">
+                                                <div class="card-img-2">
+                                                    <?php
+                                                    require_once 'post/post_connect.php';
+                                                    
+                                                    $sql = "SELECT * FROM posts  where idPost='34'" ;
+                                                    $result = mysqli_query($conn, $sql);       
+                                                    if(mysqli_num_rows($result) > 0){                   
+                                                        while ($row=mysqli_fetch_array($result)){
+                                                        $imageURL = 'photo/'.$row["images"];
+                                                    ?>
+                                                    <a href="post/post_view.php?id=34">
+                                                        <img src="<?php echo $imageURL?>" class="img-fluid">
+                                                    </a>
+
+                                                </div>
+                                                <div class="px-2">
+                                                    <a class="text-decoration-none" href="">
+                                                        <h6 class=" mt-2" style="color: rgb(197, 196 ,196);">
+                                                            <?php echo $row['openDay']?> </h6>
+                                                        <h6 class="fw-bold link-dark">
+                                                            <strong><?php echo $row['title']?></strong>
+                                                        </h6>
+                                                        <p class="text-muted mt-3 mb-5"><?php echo $row['content']?>
+                                                        </p>
+                                                    </a>
+
+                                                    <div class="avatar mt-4">
+                                                        <div class="row ">
+                                                            <div class="col">
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""><svg xmlns="http://www.w3.org/2000/svg"
+                                                                        style="color:rgb(197, 196 ,196);margin-left:150px"
+                                                                        width="20" height="20" fill="currentColor"
+                                                                        class="bi bi-box-arrow-up" viewBox="0 0 16 16">
+                                                                        <path fill-rule="evenodd"
+                                                                            d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z" />
+                                                                        <path fill-rule="evenodd"
+                                                                            d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z" />
+                                                                    </svg>
+
+                                                                </a>
+                                                            </div>
+                                                            <div class="col">
+                                                                <a href=""> <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        style="color:rgb(197, 196 ,196);" width="24"
+                                                                        height="24" fill="currentColor"
+                                                                        class="bi bi-star" viewBox="0 0 16 16">
+                                                                        <path
+                                                                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                                    </svg></a>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <?php
+                         }
+                        }
+                                ?>
+
                                 </div>
                                 <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel"
                                     role="button" data-bs-slide="prev">
