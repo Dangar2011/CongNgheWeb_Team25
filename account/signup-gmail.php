@@ -36,7 +36,7 @@
                     <form action="active_account.php" method="post">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label"><strong>Your name</strong></label>
-                            <input  type="text" name="name" id="name" class="form-control"  aria-describedby="emailHelp" pattern="^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$" required />
+                            <input  type="text" name="username" id="username" class="form-control"  aria-describedby="emailHelp" pattern="^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$" required />
                             <div id="yourname" class="form-text">Your name with be public on Your meetup profile.</div>
                         </div>
                         <div class="mb-3">

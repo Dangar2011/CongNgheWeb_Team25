@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 15, 2022 lúc 06:17 AM
+-- Thời gian đã tạo: Th1 15, 2022 lúc 07:30 AM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.12
 
@@ -40,22 +40,6 @@ CREATE TABLE `ad` (
 
 INSERT INTO `ad` (`idAdmin`, `username`, `email`, `password`) VALUES
 (1, 'dang', 'dangdinh@gmail.com', 'abc123');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `avtivated`
---
-
-CREATE TABLE `avtivated` (
-  `id` int(11) NOT NULL,
-  `name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` int(11) NOT NULL DEFAULT 0,
-  `email_verification_link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email_verified_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -136,15 +120,19 @@ CREATE TABLE `users` (
   `email` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `avatar` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `gender` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT 'Male',
-  `birthday` date DEFAULT NULL
+  `birthday` date DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0,
+  `email_verification_link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `users`
 --
 
-INSERT INTO `users` (`idUser`, `username`, `password`, `email`, `avatar`, `gender`, `birthday`) VALUES
-(2, 'admin', 'abc123', 'admin@gmail.com', 'Meetup.png', 'Male', '0000-00-00');
+INSERT INTO `users` (`idUser`, `username`, `password`, `email`, `avatar`, `gender`, `birthday`, `status`, `email_verification_link`, `email_verified_at`) VALUES
+(2, 'admin', 'abc123', 'admin@gmail.com', 'Meetup.png', 'Male', '0000-00-00', 0, '', NULL),
+(8, 'pham trong bang', '12345', 'trongbang1501@gmail.com', NULL, 'Male', NULL, 0, 'cb6ac1006a55ce7a15bf5fe566cf1740832', NULL);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -155,13 +143,6 @@ INSERT INTO `users` (`idUser`, `username`, `password`, `email`, `avatar`, `gende
 --
 ALTER TABLE `ad`
   ADD PRIMARY KEY (`idAdmin`);
-
---
--- Chỉ mục cho bảng `avtivated`
---
-ALTER TABLE `avtivated`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Chỉ mục cho bảng `comments`
@@ -197,7 +178,8 @@ ALTER TABLE `posts`
 -- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`idUser`);
+  ADD PRIMARY KEY (`idUser`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT cho các bảng đã đổ
@@ -208,12 +190,6 @@ ALTER TABLE `users`
 --
 ALTER TABLE `ad`
   MODIFY `idAdmin` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT cho bảng `avtivated`
---
-ALTER TABLE `avtivated`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT cho bảng `comments`
@@ -243,7 +219,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
