@@ -18,7 +18,7 @@
         //Thực hiện truy vấn
         $email = $_GET['key']; // Bắt giá trị trên URL
         $token = $_GET['token'];
-        $sql = "SELECT * FROM `users` WHERE `email_verification_link`='" . $token . "' and `email`='" . $email . "';";
+        $sql = "SELECT * FROM `activated` WHERE `email_verification_link`='" . $token . "' and `email`='" . $email . "';";
         $query = mysqli_query($conn, $sql);
 
         $d = date('Y-m-d H:i:s'); // Thời gian kích hoạt
@@ -27,7 +27,7 @@
             $row = mysqli_fetch_array($query);
             if ($row['email_verified_at'] == NULL) //Kiểm tra chưa kích hoạt
             {   
-                $sql2 = "UPDATE users set email_verified_at ='" . $d . "', status = 1 WHERE email='" . $email . "'";
+                $sql2 = "UPDATE activated set email_verified_at ='" . $d . "', status = 1 WHERE email='" . $email . "'";
                 mysqli_query($conn, $sql2);
                 $msg = "Congratulations! Your email has been verified.";
             } else {
