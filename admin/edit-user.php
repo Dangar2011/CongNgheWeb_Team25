@@ -23,7 +23,7 @@
     $sql1="SELECT * FROM Users WHERE idUser='$id'";
     $query=mysqli_query($conn,$sql1);
     $row=mysqli_fetch_assoc($query);
-    $imageURL = '../avatar/'.$row["avatar"];
+    $imageURL = 'avatar/'.$row["avatar"];
     $idPost= $row['idUser'];
 ?>
     <form action="process-update-user.php" enctype="multipart/form-data" method="post" class="form" >
