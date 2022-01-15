@@ -13,23 +13,23 @@
 </head>
 
 <body>
-    <header>
+<header>
         <div class="top_narbar">
             <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand ms-4" href="../CongNgheWeb_Team25/index.php"><img src="image/meetup-logo-1.png" style="height: 32px; width: 100px;" alt=""></a>
+                    <a class="navbar-brand ms-4" href="../CongNgheWeb_Team25/home.php"><img src="image/meetup-logo-1.png" style="height: 32px; width: 100px;" alt=""></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <!-- Form Search -->
                     <div class=" ms-4">
-                        <div class="">
-                            
-                            <form action="process-search.php"class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for keywords" aria-label=""name="search">
-                            <input type="text" class="form-control" placeholder="Enter Location" aria-label=""name="find">
-                                <button class="btn btn-outline-secondary bg-danger" type="submit" name="btnSearch">
+                        <div>
+
+                            <form action="process-search.php" class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for keywords" aria-label="" name="search">
+                                <input type="text" class="form-control" placeholder="Enter Location" aria-label="" name='find'>
+                                <button class="btn btn-outline-secondary bg-danger" type="submit" name='btnSearch'>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 20 20" style="color:white">
                                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                                     </svg>
@@ -39,22 +39,52 @@
                     </div>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" style="color: #339966;" aria-current="page" href=""><b>Start a new group</b></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html"><i class="bi bi-globe"></i>
-                                    <strong>English</strong></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="account/login.php"><b>Log In</b></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="account/signup.php"><b>Sign Up</b></a>
-                            </li>
-                        </ul>
-                    </div>
+                            <ul class="navbar-nav ms-auto mb-0 mb-lg-0 ">
+                                <button class="nav-item bg-white border-0">
+                                    <a class="nav-link text-decoration-none link-primary"
+                                        style="color:rgb(170, 170 ,170);" href="#">Start a new group-30% off!</a>
+                                </button>
+                                <button class="nav-item bg-white border-0">
+                                    <a href="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            style="color: black" fill="currentColor" class="bi bi-chat-left"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                        </svg>
+
+                                    </a>
+                                </button>
+                                <button class="nav-item bg-white border-0">
+                                    <a href="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            style="color: black" fill="currentColor" class="bi bi-bell"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                                        </svg>
+                                    </a>
+                                </button>
+                                <button class="flex-shrink-0 dropdown bg-white border-0">
+                                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle"
+                                        id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="image/Meetup_Logo.png" alt="mdo" width="32" height="32"
+                                            class="rounded-circle">
+                                    </a>
+                                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                                        <li><a class="dropdown-item" href="#">Your events</a></li>
+                                        <li><a class="dropdown-item" href="#">Your groups</a></li>
+                                        <li>
+                                            <hr>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">My Profile</a></li>
+                                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                                        <li><a class="dropdown-item" href="#">Help</a></li>
+                                        <li><a class="dropdown-item" href="../CongNgheWeb_Team25/account/logout.php">Log out</a></li>
+                                    </ul>
+                                </button>
+                            </ul>
+                        </div>
                 </div>
             </nav>
             <hr>
@@ -67,12 +97,12 @@
     <main class="container mt-5 col-sm-10">
         <div class="group row">
             <div class="list-unstyled col-md-1">
-                <a href="events.php" style="color: #006699">
+                <a href="events-log.php" style="color: #006699">
                     <h4>Events</h4>
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="groups.php" style="text-decoration:none; color: rgb(156, 148, 148) ">
+                <a href="groups-log.php" style="text-decoration:none; color: rgb(156, 148, 148) ">
                     <h4>Groups</h4>
 
                 </a>
@@ -134,7 +164,7 @@
         <div class="list_groups">
             <?php
             require('C:\xampp\htdocs\CongNgheWeb_Team25\post\post_connect.php');
-            $sql = "SELECT * FROM posts";
+            $sql = "SELECT idPost,title,images,openday,address FROM posts";
             $result = mysqli_query($conn, $sql);
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_array($result)) {
@@ -147,7 +177,7 @@
                         </div>
                         <div class="col-md-6 p-4 ps-md-0" style="color: rgb(156, 148, 148)">
 
-                            <h7 style="color: #999966">Openday: <?php echo $row['openDay'];   ?></h7>
+                            <h7 style="color: #999966">Openday: <?php echo $row['openday'];   ?></h7>
                             <h5 class="mt-0" style="color: black;"><?php echo $row['title']; ?></h5>
                             <div class="mt-2">
                                 <p>Address: <?php echo $row['address']; ?> </p>
@@ -155,7 +185,7 @@
                             <a href="post/post_view.php?id=<?php echo $row['idPost']; ?>" class="stretched-link"></a>
                         </div>
                         <div class="members" style="text-align: center; color: rgb(156, 148, 148)">
-                          
+                            24 attendees
                             <hr>
                     <?php
                 }

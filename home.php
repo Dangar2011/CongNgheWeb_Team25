@@ -111,7 +111,7 @@
                                         <li><a class="dropdown-item" href="#">My Profile</a></li>
                                         <li><a class="dropdown-item" href="#">Settings</a></li>
                                         <li><a class="dropdown-item" href="#">Help</a></li>
-                                        <li><a class="dropdown-item" href="#">Log out</a></li>
+                                        <li><a class="dropdown-item" href="../CongNgheWeb_Team25/account/logout.php">Log out</a></li>
                                     </ul>
                                 </button>
                             </ul>
