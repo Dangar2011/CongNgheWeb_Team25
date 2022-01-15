@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 10, 2022 lúc 07:07 AM
+-- Thời gian đã tạo: Th1 15, 2022 lúc 05:53 AM
 -- Phiên bản máy phục vụ: 10.4.20-MariaDB
 -- Phiên bản PHP: 8.0.9
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `btl`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `ad`
+--
+
+CREATE TABLE `ad` (
+  `idAdmin` int(11) UNSIGNED NOT NULL,
+  `username` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `ad`
+--
+
+INSERT INTO `ad` (`idAdmin`, `username`, `email`, `password`) VALUES
+(1, 'dang', 'dangdinh@gmail.com', 'abc123');
 
 -- --------------------------------------------------------
 
@@ -41,9 +61,10 @@ CREATE TABLE `comments` (
 --
 
 CREATE TABLE `groups` (
-  `idGroups` int(11) NOT NULL,
+  `idGroup` int(11) NOT NULL,
   `idUser` int(11) DEFAULT NULL,
-  `idPost` int(11) DEFAULT NULL
+  `idPost` int(11) DEFAULT NULL,
+  `groupName` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -68,12 +89,23 @@ CREATE TABLE `posts` (
   `idUser` int(11) DEFAULT NULL,
   `idPCate` int(11) DEFAULT NULL,
   `title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `content` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `content` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `images` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `address` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT 'None',
   `created` datetime NOT NULL DEFAULT curdate(),
   `openDay` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `posts`
+--
+
+INSERT INTO `posts` (`idPost`, `idUser`, `idPCate`, `title`, `content`, `images`, `address`, `created`, `openDay`) VALUES
+(25, 2, NULL, 'Midtown Murder Mystery Scavenger Hunt', 'Time do something different', 'midtown.png', 'New York, NY', '2022-01-11 23:10:23', '2022-01-20'),
+(26, NULL, NULL, 'Grand Central Murder Mystery & Scavenger Hunt', 'error', 'Sahaja Yoga.jpeg', 'New York, NY', '2022-01-12 09:34:04', '2022-01-20'),
+(27, NULL, NULL, 'test ts', 'test ts', 'event-5.jpg', 'New York, NY', '2022-01-12 23:04:32', '2022-01-22'),
+(30, NULL, NULL, 'Grand Central Murder Mystery & Scavenger Hunt', '\r\náđâsdấđa', 'Hunt-event.png', 'New York, NY', '2022-01-13 20:39:01', '2022-01-28'),
+(31, NULL, NULL, 'Phong don', 'Phong Donn', 'Intro-2.jpg', 'Ha Noi', '2022-01-14 14:54:02', '2022-01-28');
 
 -- --------------------------------------------------------
 
@@ -84,7 +116,7 @@ CREATE TABLE `posts` (
 CREATE TABLE `users` (
   `idUser` int(11) NOT NULL,
   `username` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `pass` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `avatar` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `gender` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT 'Male',
@@ -92,8 +124,21 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Đang đổ dữ liệu cho bảng `users`
+--
+
+INSERT INTO `users` (`idUser`, `username`, `password`, `email`, `avatar`, `gender`, `birthday`) VALUES
+(2, 'admin', 'abc123', 'admin@gmail.com', 'Meetup.png', 'Male', '0000-00-00');
+
+--
 -- Chỉ mục cho các bảng đã đổ
 --
+
+--
+-- Chỉ mục cho bảng `ad`
+--
+ALTER TABLE `ad`
+  ADD PRIMARY KEY (`idAdmin`);
 
 --
 -- Chỉ mục cho bảng `comments`
@@ -107,7 +152,7 @@ ALTER TABLE `comments`
 -- Chỉ mục cho bảng `groups`
 --
 ALTER TABLE `groups`
-  ADD PRIMARY KEY (`idGroups`),
+  ADD PRIMARY KEY (`idGroup`),
   ADD KEY `fk_groups_user` (`idUser`),
   ADD KEY `fk_groups_post` (`idPost`);
 
@@ -136,6 +181,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT cho bảng `ad`
+--
+ALTER TABLE `ad`
+  MODIFY `idAdmin` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT cho bảng `comments`
 --
 ALTER TABLE `comments`
@@ -145,7 +196,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT cho bảng `groups`
 --
 ALTER TABLE `groups`
-  MODIFY `idGroups` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idGroup` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `postcategory`
@@ -157,13 +208,13 @@ ALTER TABLE `postcategory`
 -- AUTO_INCREMENT cho bảng `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `idPost` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
